@@ -16,7 +16,6 @@ function HomePage() {
 
 
   const productList = useSelector(state => state.productList)
-  // const {error, loading, products, page, pages} = productList
   const {error, loading, products} = productList
 
 
@@ -24,6 +23,7 @@ function HomePage() {
   const keyword = params.get('keyword')
   
   
+  console.log(products);
 
  
 
@@ -35,13 +35,6 @@ function HomePage() {
     }
   }, [dispatch, keyword])
 
-  // useEffect(() => {
-  //     if (keyword) {
-  //       dispatch(listProducts(keyword, page))
-  //     } else {
-  //       dispatch(listProducts('', page))
-  //     }
-  // }, [dispatch, keyword, page])
 
 
   return (
@@ -53,7 +46,8 @@ function HomePage() {
             error ? <Message variant = 'danger' >{JSON.stringify(error)}</Message> : 
               <div>
                 <Row>
-                    {products.map(product => (
+                    {/* {products.map(product => ( */}
+                    {Array.isArray(products) && products.map(product => (
                     <Col //makes this responsive
                         key={product._id} sm={12} md={6} lg={4} xl={3}>
                         <Product product={product} />                        
