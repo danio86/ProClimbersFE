@@ -12,7 +12,6 @@ import Paginate from '../components/Paginate'
 
 function HomePage() {
 
-  // const {keyword} = useParams()
   const location = useLocation()
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -22,15 +21,11 @@ function HomePage() {
   // const {error, loading, products, page, pages} = productList
   const {error, loading, products} = productList
 
-  // let searchWord = location.search;
 
   const params = new URLSearchParams(location.search)
   const keyword = params.get('keyword')
   
   
-  // const [keyword, setKeyword] = useState('')
-
-
 
  
 
