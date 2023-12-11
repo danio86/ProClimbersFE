@@ -15,7 +15,10 @@ export const listProducts = (keyword = '') => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
-        const { data } = await axios.get(`/api/products?keyword=${keyword}`)
+        // const { data } = await axios.get(`/api/products?keyword=${keyword}`)
+
+        const { data } = await axios.get(`https://proclimbers-backend-d69c858b50d1.herokuapp.com/api/products?keyword=${keyword}`);
+
 
         console.log(data, 'test') // Log the response data
 
