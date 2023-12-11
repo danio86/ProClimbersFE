@@ -1,6 +1,5 @@
 {
   "name": "moments",
-  "proxy":"https://proclimbers-backend-d69c858b50d1.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
