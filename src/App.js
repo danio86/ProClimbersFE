@@ -16,8 +16,8 @@ import UserEditPage from './screens/UserEditPage';
 import ProductListPage from './screens/ProductListPage';
 import ProductEdidPage from './screens/ProductEdidPage';
 import OrderListPage from './screens/OrderListPage';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NotFound from './components/NotFound';
 
 
 
@@ -46,6 +46,7 @@ function App() {
             <Route path='/admin/productlist' element={<ProductListPage />} />
             <Route path='/admin/product/:id/edit' element={<ProductEdidPage />} />
             <Route path='/admin/orderlist' element={<OrderListPage />} />
+            <Route path='*' element={<NotFound />} />
 
           </Routes>
         </Container>
