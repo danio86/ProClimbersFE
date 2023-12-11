@@ -17,6 +17,8 @@ export const listProducts = (keyword = '') => async (dispatch) => {
 
         const { data } = await axios.get(`/api/products?keyword=${keyword}`)
 
+        console.log(data) // Log the response data
+
 
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
     
