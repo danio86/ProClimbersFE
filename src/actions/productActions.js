@@ -17,13 +17,14 @@ export const listProducts = (keyword = '') => async (dispatch) => {
 
         const { data } = await axios.get(`/api/products?keyword=${keyword}`)
 
-        console.log(data) // Log the response data
+        console.log(data, 'test') // Log the response data
 
 
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
     
     
     } catch (error) {
+        console.log(error, 'errorrrrr') // Log the error
         dispatch({ 
             type: PRODUCT_LIST_FAIL,
             payload: error.response && error.response.data.detail ? error.response.data.detail : error.message,
