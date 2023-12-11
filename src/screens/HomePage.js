@@ -23,7 +23,7 @@ function HomePage() {
   const keyword = params.get('keyword')
   
   
-  console.log(products);
+  console.log(products, 'testttt');
 
  
 
@@ -54,7 +54,6 @@ function HomePage() {
                     </Col>
                     ))}
                 </Row>
-                {/* <Paginate page={page} pages={pages} keyword={keyword} /> */}
                 
             
 
