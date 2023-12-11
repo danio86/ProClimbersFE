@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import { redirect, useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
 import { useDispatch, useSelector} from 'react-redux'
 import Message from '../components/Message'
 import {Link} from 'react-router-dom'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { PayPalButton } from 'react-paypal-button-v2'
-import Forms from '../components/Forms'
 import { getOrderDetails, payOrder, deliverOrder } from '../actions/orderActions'
 import { useParams } from 'react-router-dom';
 import { ORDER_PAY_RESET, ORDER_DELIVERED_RESET } from '../constants/orderConstants'
@@ -20,10 +19,6 @@ import { ORDER_PAY_RESET, ORDER_DELIVERED_RESET } from '../constants/orderConsta
 
 function OrderPage() {
 
-    // const { id: orderId } = useParams()
-
-    // const { orderId } = useParams();
-    // let { orderId } = useParams();
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const orderDetails = useSelector(state => state.orderDetails)
@@ -71,9 +66,6 @@ useEffect(() => {
         navigate('/login')
     }
 
-    // if (!order || successPay || orderId !== String(orderId)) {
-    // if (!order || successPay || order._id !== String(orderId)) {
-    // if (!order || successPay || (order && order._id !== String(orderId))) {
     if (!order || successPay || (order && order._id !== Number(orderId)) || successDelivered) {
 
 
@@ -89,13 +81,7 @@ useEffect(() => {
     }
 }, [order, orderId, dispatch, successPay, successDelivered])
 
-// useEffect(() => {
-//     if (!order || orderId !== String(orderId)) {
-//         dispatch(getOrderDetails(orderId))
-//     }
-// // }, [order, orderId, dispatch, navigate])
-// }, [order, orderId, dispatch])
-// }, [order, orderId, ])
+
 
 
 

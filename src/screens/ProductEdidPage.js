@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react'
-// import { Link, redirect, useLocation, useNavigate, useParams } from 'react-router-dom'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector} from 'react-redux'
 import Message from '../components/Message'
 import LoadingSpinner from '../components/LoadingSpinner'
-import { getUserDetails } from '../actions/userActions'
 import Forms from '../components/Forms'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
@@ -17,9 +15,7 @@ function ProductEdidPage() {
 
     const id = useParams()
     const navigate = useNavigate()
-    const dispatch = useDispatch()
-    const location = useLocation()
-    
+    const dispatch = useDispatch()    
 
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)

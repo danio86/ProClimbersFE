@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Link, useParams, useHistory, useNavigate } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Form, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import LoadingSpinner from '../components/LoadingSpinner'

@@ -1,19 +1,17 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 // import products from '../products'
 import { Row, Col } from 'react-bootstrap'
-import { useNavigate, useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Product from '../components/Product'
 import LoadingSpinner from '../components/LoadingSpinner'
 import Message from '../components/Message'
 import {useDispatch, useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
-import Paginate from '../components/Paginate'
 
 
 function HomePage() {
 
   const location = useLocation()
-  const navigate = useNavigate()
   const dispatch = useDispatch()
 
 

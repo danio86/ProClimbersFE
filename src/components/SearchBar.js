@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
-import { useNavigate, useLocation, useParams } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 
 
 
 function SearchBar() {
-  const [search, setSearch] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
   const [keyword, setKeyword] = useState('')

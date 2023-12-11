@@ -57,7 +57,3 @@ test('reders login link if the user is not logged in', async () => {
    expect(linkElement).toBeInTheDocument();
 }
 );
-
-
-
-
