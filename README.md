@@ -18,48 +18,46 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 - **Navigation & Authentication**
   - Navigation: As any kind of user, I can view a navbar from every page so that I can navigate easily between pages.
   - Routing: As any kind of user, I can navigate through pages quickly so that I can view content seamlessly without page refresh.
-  - Authentication - Sign up: As a visitor I can create a new account so that I can access all the features for signed up         customers
-  - Sign in: As a customer or employee I can sign in to the app so that I can access functionality for logged in users
-  - Logged in Status: As a user I can tell if I am logged in or not so that I can log in if I need to
-  - Refreshing access tokens: As a user I can maintain my logged-in status for 31 days to be able to choose to log out so that my user experience is not compromised
+  - Authentication - Sign up: As a visitor, I can create a new account so that I can access all the features for signed-up customers.
+  - Sign in: As a customer or employee, I can sign in to the app so that I can access functionality for logged-in users.
+  - Logged in Status: As a user, I can tell if I am logged in or not so that I can log in if I need to.
+  - Refreshing access tokens: As a user, I can maintain my logged-in status for 31 days to be able to choose to log out so that my user experience is not compromised.
   - Conditional rendering: 
-    - As a logged out user I can see sign in and sign up options so that I can sign in/sign up
-    - As an employee i can navigate to the shop's administration order dashboard, so that I can view all the orders and there status
-    - As an employee i can navigate to the shop's administration product dashboard, so that I can view all offering of Proclimbers
-    - As a customer I can navigate through the ordering process, so that I can order products and pay them. 
-
+    - As a logged-out user, I can see sign in and sign up options so that I can sign in/sign up.
+    - As an employee, I can navigate to the shop's administration order dashboard, so that I can view all the orders and their status.
+    - As an employee, I can navigate to the shop's administration product dashboard, so that I can view all offerings of Proclimbers.
+    - As a customer, I can navigate through the ordering process, so that I can order products and pay for them. 
 
 - **The Home Page**
-    - As any kind of user, I can search for products with keywords, so that I can find the products with this keyword 
-    - As any kind of user, I can click on a product, so that I get get more information about it. 
-    
+    - As any kind of user, I can search for products with keywords, so that I can find the products with this keyword.
+    - As any kind of user, I can click on a product, so that I can get more information about it. 
 
 - **The Product Detail Page**
-    - As a logged in customer, I can view the properties page so that I can read the information about the property
-    - As a logged in customer, I can write comments and rate the product so that other customer can get motivated to buy the product too.
-    - As a logged in customer, I can add the product to my cart here, so that I can view my order there.
+    - As a logged-in customer, I can view the properties page so that I can read the information about the property.
+    - As a logged-in customer, I can write comments and rate the product so that other customers can get motivated to buy the product too.
+    - As a logged-in customer, I can add the product to my cart here, so that I can view my order there.
 
 - **The Cart Page**
-    - As a logged in customer, I can view my order, so that I can get all information about the the quantity and the price of my order.
-    - As a logged in customer, I can delete my order, so that I can make my cart empty
-    - As a logged customer, I can edit the amount of the product, so that I can choose to buy more or less of the product
-    - As a loggedcustomer, I can navigate to paying process, so that I can buy the product.
+    - As a logged-in customer, I can view my order, so that I can get all information about the quantity and the price of my order.
+    - As a logged-in customer, I can delete my order, so that I can make my cart empty.
+    - As a logged-in customer, I can edit the amount of the product, so that I can choose to buy more or less of the product.
+    - As a logged-in customer, I can navigate to the payment process, so that I can buy the product.
 
 - **The Admin Dashboards**
-    - As a shopowner, I can navigate to the admin dashbords for user, orders and products, so that I can navigate from here to the edit/update pages
-    - As a shopowner, I can click the delete button, so that I can delete products, orders and user 
-    - As a shopowner, I can view all user, products and orders, so that I can get all the information I need
+    - As a shop owner, I can navigate to the admin dashboards for users, orders, and products, so that I can navigate from here to the edit/update pages.
+    - As a shop owner, I can click the delete button, so that I can delete products, orders, and users.
+    - As a shop owner, I can view all users, products, and orders, so that I can get all the information I need.
 
 - **The Edit Pages**
-    - As a shopowner, I can change attributes of products, so that visitors see other prices, images, ...
-    - As a shopowner, I can create products, so that users can buy tham.
-    - As a shopowner, I can edit user, so that they have admin status (if they are employees) or different email adresses.
-    - As a shopowner, I can view orders, so that I can navigate to the status Information.
-    - As a shopowner, I can chnge the order status, so that the order shows up as dilivered.
+    - As a shop owner, I can change attributes of products, so that visitors see other prices, images, etc.
+    - As a shop owner, I can create products, so that users can buy them.
+    - As a shop owner, I can edit users, so that they have admin status (if they are employees) or different email addresses.
+    - As a shop owner, I can view orders, so that I can navigate to the status information.
+    - As a shop owner, I can change the order status, so that the order shows up as delivered.
 
-- **The Edit Pages**
-    - As a logged user, I can view my user information, so that I can change them.
-    - As a logged user, I can view my orders, so that I can get status information.
+- **The User Pages**
+    - As a logged-in user, I can view my user information, so that I can change them.
+    - As a logged-in user, I can view my orders, so that I can get status information.
 
 
 
@@ -70,43 +68,37 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 
 - __Header__
 
-    - The header contains the TheShop logo which is a link to the home webpage. The header also contanis the user image or a default avatar. The links to the SignIn SignOut and profilePages are also included here.
-    - The header has a fixed position and can be seen on all  webpages at the top of the browser window. 
-    - On small screens the header collapes to the logo and a dropdrown burger button.
-    - The header tells the user the name of the company and clearly guides the user to all the points that interest them. 
-     - Header Images
-          <img src="src/assets/screenshot-header.png" alt="Header">
+    - The header contains the ProClimbers name which is a link to the home webpage. The search bar and the link to the Cart page are also included here.
+    - The dropdown menus for the user, which contain the logout button and the link to the profile page, and the Admin dropdown menu are located here.
+      - The admin dropdown contains the links to all dashboard pages.
+        - If the current user is not an admin, this dropdown menu is invisible.
+    - The header has a fixed position and can be seen on all webpages at the top of the browser window.
+    - On small screens, the header collapses to a dropdown burger button.
+    - The header informs the user of the company name and clearly guides the user to all points of interest.
+        
+        - Header Images
+              <img src="src/assets/screenshot-header.png" alt="Header">
 
-       
-
-  - __The Sidebar__ 
-
-  - The sidebar section includes links to create update delete properties. Also links to filter properties and the property detail view. 
-  - The sidebar is colapsible on click and can just be used by loggedin users.
-
-- Sidebar
-
-  <img src="src/assets/screenshot-sidebar.png" alt="Sidebar">
-  <img src="src/assets/screenshot-sidebar-open.png" alt="sidebar-open">
+      
 
 
 ### The Homepage
 
-- The homepage is the starting page where you can see all properties in three columns. You can scroll down here and click on individual properties to get detailed information. Additionally, you can also view filtered search results here.
+- The homepage is the starting page where you can see all products in three columns. You can scroll down here and click on individual products to get detailed information. Additionally, you can also view filtered search results here.
 - On smaller screens, you will see only one column instead of three.
 
-    - Landing Page Images
+    - Landing Page
 <img src="src/assets/screenshot-landingpage.png" alt="Landing">
 
 
 
-### The Property Page
+### The Product Detail Page
 
-- On the property page, you can access additional information about the property and view an enlarged image.
-- Here, you can express your interest and make purchase inquiries.
-- If you are the creator of the property, you can edit or delete it here.
+- On the product detail page, you can access additional information about the product.
+- If you are logged in, you can comment and rate a product here.
+- You can also add the product to your shopping cart here.
 
-   - Property page
+   - Product page
    <img src="src/assets/screenshot-propertypage.png" alt="Property">
 
 
@@ -114,28 +106,52 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 
 ### Profile Page
 
-- This page shows all properties the user has created.
-- Here other user can show that they are interested in a property of the this user.
-- If the user is the owner of this profile, the user can edit the profile here.
+- This page shows all order the user has created and userinformation like email and password.
+- The user informormations can be updated here.
+- The user can also navigate to the order status here.
 
   - Profile page
   <img src="src/assets/screenshot-profilepage.png" alt="Profile">
 
 
-### User-Settings Page
-
-- Here the user can change some of his personal data. He can change the username, password and his avatar. 
-
-    - User Settings Image
-  <img src="src/assets/screenshot-edit-form.png" alt="User-Settings">
 
 
-## Create - Update - property
+### Create-Update-product Page
+
+- If the User has admin status, she or he can create or upate, which is technically the same, a product here.
+- All filds ore optional or have default values.
+    - 404 page
+    <img src="src/assets/screenshot-404.png" alt="404">
+
+### Update User and Order Pages
+
+- If the User has admin status, she or he can upate order and user here.
+- If a user is an employee of Proclimbers the chef can make this user an admin.
+- If a product is already paid, an admin can set the order status to delivered
+    - Udate user page
+    <img src="src/assets/screenshot-404.png" alt="404">
+    - Udate Order page
+    <img src="src/assets/screenshot-404.png" alt="404">
 
 
-### Update-property Page
+### order and pay process Pages
 
-- If the user has created a property, they can then update it. By clicking 'edit' on the property, they can change the title and all the other attributes. Additionally, they can change the property status from available to sold and vice versa. 
+- This process contains severral pages
+  - The user can change the amount of products her and gets an overview about all pices
+  - The user can choose the paypal or credid card to pay (at the moment only paypal)
+  - The user can pay the product
+    - To test this a sandbox test paypal account is suggested.
+
+    - Udate user page
+    <img src="src/assets/screenshot-404.png" alt="404">
+    - Udate Order page
+    <img src="src/assets/screenshot-404.png" alt="404">
+    - Udate Order page
+    <img src="src/assets/screenshot-404.png" alt="404">
+    - Udate Order page
+    <img src="src/assets/screenshot-404.png" alt="404">
+
+
 
 
 ### 404 Page
@@ -148,23 +164,13 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 
 ## Login - Sign Up - Page
 
-- All three pages have been taken over and modified by Ci Moments Project.
+- These pages are customised, so that a user needs to login with email address
+- If user is already logged in, she or he cannot login again
+- If a user is logged in a loout button appears in the user dropdownmenu
 
-
-### The Login Page
-
-  - This page will allow the user to log in to his or her account. If the user has not yet registered, he can do so here. No user can log in without having registered. There is a link to the signup page.
-  - The User can log in with username and password.
 
   - Login
   <img src="src/assets/screenshot-signin.png" alt="Log-In">
-
-
-### The Sign Up Pages
-
-  - In the SignUp page, the username and password must be provided. The password must be confirmed afterward. 
-  
-
   - Sign Up
   <img src="src/assets/screenshot-signup.png" alt="Sign Up">
 
@@ -172,8 +178,9 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 ## Features Left to Implement
 
   - Planned features: 
-    - In the future, the user will be able to add additional images to their property.
-    - TheShop administrator will have a dashboard with statistics on sales, preferred locations, and other data.
+    - In the future, an admin will be able to add additional images to their products.
+    - Users can add a profile image
+    - The page gets a logo
 
 
 
@@ -183,7 +190,7 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
     - I have tested that the website works in different browsers (Chrome and Firefox).
     - I confirm that the website works and looks good on all standard screen sizes. This was tested with the devtools divice toolbar.
     - I confirm that the all forms are working.
-    - I confirm that the the user can create, edit and delete properties and inquiries.
+    - I confirm that the the user can create, edit and delete products and orders.
 
 
     
@@ -225,10 +232,6 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 ### Unfixed Bugs
 
  - No Bugs are unfixed.
- - But functions that have to be solved better in the future.
-    - In the future, the user will log in with an e-mail address.
-    - Other users will see whether you are online or not.nearby and use the link to further information about her/him.
-
 
 ## Deployment
 
@@ -237,7 +240,7 @@ The project was deployed using Code institut's mock for Heroku
     Steps for deployment:
         This repository was cloned.
         A Herroku app was created.
-        Added config vars for the secret key, for cloudinary and for the posgresql database.
+        Added config vars for the secret key and for the posgresql database.
         The Heroku app was linked to the repository
         Deploy was clicked.
 
@@ -264,7 +267,6 @@ The live link can be found [here](https://the-shop-fe-75bf1203be46.herokuapp.com
 
 - The Images used on all pages are from this open Source site [Pixabay](https://pixabay.com/de/)
 - All Images are stored in the Cloudinary platform.
-- The Logo was made with [Canva](https://www.canva.com/create/logos/)
 
 
 ### Personal Advice
