@@ -7,6 +7,9 @@ import LoadingSpinner from '../components/LoadingSpinner'
 import Message from '../components/Message'
 import {useDispatch, useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
+import backgroundImage from '../assets/mountain-background.png'
+import '../background.css'; // adjust the path to match your file structure
+
 
 
 function HomePage() {
@@ -39,14 +42,15 @@ function HomePage() {
 
   return (
     
-    <div>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+
+    {/* <div> */}
         <h1>Welcome to ProClimbing</h1>
         {
           loading ? <LoadingSpinner /> : 
             error ? <Message variant = 'danger' >{JSON.stringify(error)}</Message> : 
               <div>
                 <Row>
-                    {/* {products.map(product => ( */}
                     {Array.isArray(products) && products.map(product => (
                     <Col //makes this responsive
                         key={product._id} sm={12} md={6} lg={4} xl={3}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { useNavigate, useLocation } from 'react-router-dom'
+import '../styles/searchBar.css';
 
 
 
@@ -36,7 +37,7 @@ function SearchBar() {
             >
             </Form.Control>
         </Form.Group>
-        <Button type='submit' variant='outline-success' className='p-2 ml-2'>
+        <Button type='submit' variant='outline-success' className='p-2 ml-2 searchButton'>
             Search
         </Button>
       

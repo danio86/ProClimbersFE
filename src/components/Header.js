@@ -4,6 +4,12 @@ import { logout } from '../actions/userActions'
 import SearchBar from './SearchBar'
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
+import '../header.css';
+import backgroundImage from '../assets/ProclimbersLogo.png'
+
+
+
+
 
 function Header() {
   const dispatch = useDispatch()
@@ -20,26 +26,29 @@ const logoutHandler = () => {
       <Navbar expand="lg" className="bg-dark" variant="dark" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>ProClimbing</Navbar.Brand>
+            <Navbar.Brand>
+              <img src={backgroundImage} alt="ProClimbing" style={{maxHeight: '35px', borderRadius: '50%', position: 'relative', top: '-5px'}} />
+            </Navbar.Brand>
+            {/* <Navbar.Brand>ProClimbing</Navbar.Brand> */}
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <SearchBar />
             <Nav className="mr-auto">
               <LinkContainer to="/cart">
-                <Nav.Link><i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
+                <Nav.Link className="headerLink"><i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
               </LinkContainer>
 
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
                 <LinkContainer to='/profile'>
-                  <NavDropdown.Item>Profile</NavDropdown.Item>
+                  <NavDropdown.Item className="headerLink">Profile</NavDropdown.Item>
                 </LinkContainer>
-                <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                <NavDropdown.Item className="headerLink" onClick={logoutHandler}>Logout</NavDropdown.Item>
               </NavDropdown>
               ) : (
                 <LinkContainer to="/login">
-                  <Nav.Link><i className="fas fa-user"></i> LogIn</Nav.Link>
+                  <Nav.Link className="headerLink"><i className="fas fa-user"></i> LogIn</Nav.Link>
                 </LinkContainer>
               )
                 

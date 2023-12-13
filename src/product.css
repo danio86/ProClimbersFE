@@ -1,0 +1,15 @@
+.productCard {
+    background: rgba(255, 255, 255, 0.8); 
+}
+
+
+.productCard a {
+    z-index: 1;
+    position: relative;
+    color: rgba(212, 141, 8, 0.807);
+    text-decoration: none;
+}
+
+.productCard a:hover {
+    color: rgb(161, 4, 4);
+  }
