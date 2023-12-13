@@ -251,14 +251,22 @@ The live link can be found [here](https://the-shop-fe-75bf1203be46.herokuapp.com
 
 ### Content
 
-- Instructions on how to structure full stack projects, how to work with databasis, how to use Django, Postgresql and Cloudinary, Summernote and Allauth are from [Code Institute - Moments and drf](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+RA101+2021_T3/courseware/70a8c55db0504bbdb5bcc3bfcf580080/953cd4e5015f483bb05263db3e740e19/)
+- Instructions on how to structure full stack projects, how to work with databasis, how to use Django, and Postgresql  are from [Code Institute - Moments and drf](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+RA101+2021_T3/courseware/70a8c55db0504bbdb5bcc3bfcf580080/953cd4e5015f483bb05263db3e740e19/)
 [and](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DRF+2021_T1/courseware/f775d54df4da44d18309888b3fe884f7/bc5fbada70104d489aa0363a03d8bda8/)
 - All icons were taken from [Font Awesome](https://fontawesome.com/)
-- Font styles were taken from [Google Fonts](https://fonts.googleapis.com)
 - The code of the header dropdown menu is taken from Bootstrap. [Bootstrap](https://getbootstrap.com/docs/4.1/components/navbar/)
+- Most styling components are from Bootstrap. [Bootstrap](https://react-bootstrap.netlify.app/docs/components/accordion)
+- The basic style is from [Bootwatch](https://bootswatch.com/) -> Sandstone
 - The all HTML structures are from Bootrap. [Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/)
-- Instructions on how to buils a sidebar in react are from [Youtube](https://www.youtube.com/watch?v=5R9jFHlG6ik&t=11s)
-- The Basic Project idea is from [Youtube](https://www.youtube.com/watch?v=jx5hdo50a2M&t=3301s)
+- The Basic Project idea is from [Youtube](https://www.youtube.com/watch?v=_ELCMngbM0E&list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng)
+- Instructions on how to upload Images in a form arefrom [stackoverflow](https://stackoverflow.com/questions/73269211/form-file-for-image-upload-not-working-in-react)
+
+- Instructions on how to use redux for better understanding of what happens when, to see wich action is fired anf for bugfixig is taken from [Youtube](https://www.youtube.com/watch?v=u3KlatzB7GM&list=PL0Zuz27SZ-6M1J5I1w2-uZx36Qp6qhjKo)
+- Instructions on how to use [JWT]https://jwt.io/ to check for token information is taken from CodeInsttute
+- Instructions on how to use Postman to check the api calls with different authentification levels are taken from  [Youtube](https://www.youtube.com/watch?v=_ELCMngbM0E&list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng)
+
+
+
 
 - Color-Scheme
   <img src="src/assets/color-scheme.png" alt="Color Scheme">
