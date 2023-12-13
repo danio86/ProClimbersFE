@@ -19,13 +19,14 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
   - Navigation: As any kind of user, I can view a navbar from every page so that I can navigate easily between pages.
   - Routing: As any kind of user, I can navigate through pages quickly so that I can view content seamlessly without page refresh.
   - Authentication - Sign up: As a visitor I can create a new account so that I can access all the features for signed up         customers
-  - Authentication - Sign in: As a customer or employee I can sign in to the app so that I can access functionality for logged in users
-  - Authentication - Logged in Status: As a user I can tell if I am logged in or not so that I can log in if I need to
-  - Authentication - Refreshing access tokens: As a user I can maintain my logged-in status for 31 days to be able to choose to log out so that my user experience is not compromised
-  - Navigation: Conditional rendering - As a logged out user I can see sign in and sign up options so that I can sign in/sign up
-  - As an employee i can navigate to the shop's andministration order dashboard, so that I can view all the orders and there status
-  - As an employee i can navigate to the shop's andministration product dashboard, so that I can view all offering of Proclimbers
-  - As a customer I can navigate throug the ordering process, so that I can order products and pay them. 
+  - Sign in: As a customer or employee I can sign in to the app so that I can access functionality for logged in users
+  - Logged in Status: As a user I can tell if I am logged in or not so that I can log in if I need to
+  - Refreshing access tokens: As a user I can maintain my logged-in status for 31 days to be able to choose to log out so that my user experience is not compromised
+  - Conditional rendering: 
+    - As a logged out user I can see sign in and sign up options so that I can sign in/sign up
+    - As an employee i can navigate to the shop's administration order dashboard, so that I can view all the orders and there status
+    - As an employee i can navigate to the shop's administration product dashboard, so that I can view all offering of Proclimbers
+    - As a customer I can navigate through the ordering process, so that I can order products and pay them. 
 
 
 - **The Home Page**
