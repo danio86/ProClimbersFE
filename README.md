@@ -1,4 +1,4 @@
-# TheShop
+# ProClimbers
 
 <img src="src/assets/screenshot-am-I-responsive.png" alt="Am I responsive">
 
@@ -112,7 +112,7 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 - The user can also navigate to the order status here.
 
   - Profile page
-  <img src="src/assets/screenshot-profilepage.png" alt="Profile">
+  <img src="src/assets/screenshot-profilePage.png" alt="Profile">
 
 
 
@@ -122,17 +122,17 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 - If the User has admin status, she or he can create or upate, which is technically the same, a product here.
 - All filds ore optional or have default values.
     - 404 page
-    <img src="src/assets/screenshot-404.png" alt="404">
+    <img src="src/assets/screenshot-edit-product.png" alt="product update">
 
 ### Update User and Order Pages
 
 - If the User has admin status, she or he can upate order and user here.
 - If a user is an employee of Proclimbers the chef can make this user an admin.
 - If a product is already paid, an admin can set the order status to delivered
-    - Udate user page
-    <img src="src/assets/screenshot-404.png" alt="404">
-    - Udate Order page
-    <img src="src/assets/screenshot-404.png" alt="404">
+    - Update user page
+    <img src="src/assets/screenshot-edit-user.png" alt="user update">
+    - Update Order page
+    <img src="src/assets/screenshot-edit-order.png" alt="order update">
 
 
 ### order and pay process Pages
@@ -144,13 +144,13 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
     - To test this a sandbox test paypal account is suggested.
 
     - Udate user page
-    <img src="src/assets/screenshot-404.png" alt="404">
+    <img src="src/assets/screenshot-shoppingCart.png" alt="shopping Cart">
     - Udate Order page
-    <img src="src/assets/screenshot-404.png" alt="404">
+    <img src="src/assets/screenshot-shippingAddress.png" alt="shipping Address">
     - Udate Order page
-    <img src="src/assets/screenshot-404.png" alt="404">
+    <img src="src/assets/screenshot-placeOrder.png" alt="place Order">
     - Udate Order page
-    <img src="src/assets/screenshot-404.png" alt="404">
+    <img src="src/assets/screenshot-orderSummary.png" alt="order Summary">
 
 
 
@@ -171,9 +171,9 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 
 
   - Login
-  <img src="src/assets/screenshot-signin.png" alt="Log-In">
+  <img src="src/assets/screenshot-signIn.png" alt="Log-In">
   - Sign Up
-  <img src="src/assets/screenshot-signup.png" alt="Sign Up">
+  <img src="src/assets/screenshot-signUp.png" alt="Sign Up">
 
 
 ## Features Left to Implement
@@ -265,6 +265,7 @@ The live link can be found [here](https://the-shop-fe-75bf1203be46.herokuapp.com
 - Instructions on how to use redux for better understanding of what happens when, to see wich action is fired anf for bugfixig is taken from [Youtube](https://www.youtube.com/watch?v=u3KlatzB7GM&list=PL0Zuz27SZ-6M1J5I1w2-uZx36Qp6qhjKo)
 - Instructions on how to use [JWT]https://jwt.io/ to check for token information is taken from CodeInsttute
 - Instructions on how to use Postman to check the api calls with different authentification levels are taken from  [Youtube](https://www.youtube.com/watch?v=_ELCMngbM0E&list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng)
+- Instruction on how to calculate the rating start count is taken from [npm](https://www.npmjs.com/package/react-rating-stars-component)
 
 
 
@@ -274,8 +275,10 @@ The live link can be found [here](https://the-shop-fe-75bf1203be46.herokuapp.com
 
 ### Media
 
-- The Images used on all pages are from this open Source site [Pixabay](https://pixabay.com/de/)
-- All Images are stored in the Cloudinary platform.
+- The product images are from this open Source site [berg-freunde](https://www.berg-freunde.at/kletterschuhe/)
+- The background image is from [PinnacleBarber](https://m.facebook.com/PinnacleBarber/)
+- The logo is from [Vecteezy](https://de.vecteezy.com/vektorkunst/1968154-berg-logo-bilder)
+    - I have no right to use these images commertially!
 
 
 ### Personal Advice
