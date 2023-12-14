@@ -7,7 +7,8 @@ import {Link} from 'react-router-dom'
 import Checkout from '../components/Checkout'
 import { createOrder } from '../actions/orderActions'
 import { ORDER_CREATE_RESET } from '../constants/orderConstants'
-
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 function PlaceOrderPage() {
@@ -15,10 +16,8 @@ function PlaceOrderPage() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
-    // const orderCreate = useSelector(state => state.orderCreate)
 
     const orderCreate = useSelector(state => state.orderCreate)
-    // const { order, success } = orderCreate 
     const { order, success, error } = orderCreate
  
 
@@ -34,18 +33,9 @@ function PlaceOrderPage() {
         navigate('/payment')
     }
 
-    // useEffect(() => {
-    //     if (success) {
-    //         navigate(`/login/order/${order._id}`)
-    //         dispatch({ type: ORDER_CREATE_RESET })
-    //     }
-    //     // eslint-disable-next-line
-    // // }, [navigate, success, order])
-    // }, [navigate, success, order, dispatch])
 
     useEffect(() => {
         if (success && order) {
-            // console.log('Order ID:', order._id)
             setTimeout(() => {
                 navigate(`/login/order/${order._id}`)
             }, 0)
@@ -56,7 +46,6 @@ function PlaceOrderPage() {
 
     //place final order
     const finalOrder = () => {
-        // console.log(orderCreate)
 
         dispatch(createOrder({
             orderItems: cart.cartItems,
@@ -66,38 +55,17 @@ function PlaceOrderPage() {
             shippingPrice: cart.shippingPrice,
             taxPrice: cart.taxPrice,
             totalPrice: cart.totalPrice
-    }))
-    // navigate('/order')
+        }))
     }
 
-    // const finalOrder = () => {
-    //     console.log(orderCreate)
-    
-    //     dispatch(createOrder({
-    //         orderItems: cart.cartItems,
-    //         shippingAddress: cart.shippingAddress,
-    //         paymentMethod: cart.paymentMethod,
-    //         itemsPrice: cart.itemsPrice,
-    //         shippingPrice: cart.shippingPrice,
-    //         taxPrice: cart.taxPrice,
-    //         totalPrice: cart.totalPrice
-    //     }))
-    
-    //     if (order && order._id) {
-    //         navigate(`/login/order/${order._id}`)
-    //     }
-    // }
-
-
-
+   
   return (
-        <div>
+        <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <Checkout step1 step2 step3 step4 />
-            {/* <h1>Place Order</h1> */}
             <Row>
                 <Col md={8}>
                     <ListGroup variant='flush'>
-                        <ListGroup.Item>
+                        <ListGroup.Item className='pageCard'>
                             <h2>Shipping</h2>
                             <p>
                                 <strong>Address: </strong>
@@ -125,13 +93,13 @@ function PlaceOrderPage() {
                                                 </Col>
 
                                                 <Col>
-                                                    <Link to={`/product/${item.product}`}>
+                                                    <Link className='pageLink' to={`/product/${item.product}`}>
                                                         {item.name}
                                                     </Link>
                                                 </Col>
 
                                                 <Col md={4}>
-                                                    {item.qty} x ${item.price} = ${(item.qty * item.price).toFixed(2)}
+                                                    {item.qty} x {item.price}€ = {(item.qty * item.price).toFixed(2)}€
                                                 </Col>
                                             </Row>
                                         </ListGroup.Item>
@@ -146,7 +114,7 @@ function PlaceOrderPage() {
                     <Card>
                         <ListGroup variant='flush'>
 
-                            <ListGroup.Item>
+                            <ListGroup.Item className='pageCard'>
                                 <h2>Order Summary</h2>
                             </ListGroup.Item>
 
@@ -184,9 +152,10 @@ function PlaceOrderPage() {
 
                             <ListGroup.Item>
                                 <Button type='button' 
-                                className='btn-block' 
-                                disabled={cart.cartItems === 0} // if cart.cartItems === 0, then disabled={true}
-                                // onClick={() => finalOrder()}
+                                className='btn-block pageButton' 
+                                variant='dark'
+                                style={{marginLeft: 'unset'}}
+                                disabled={cart.cartItems === 0}
                                 onClick={finalOrder}
                                 >
                                     Place Order

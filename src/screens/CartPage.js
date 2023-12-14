@@ -5,6 +5,8 @@ import { Link, useLocation, useParams, useNavigate } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 
@@ -42,7 +44,7 @@ function CartPage() {
 
 
   return (
-    <Row>
+    <Row className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Col md={8}>
             <h1>Shopping Cart</h1>
             {cartItems.length === 0 ? (
@@ -52,13 +54,13 @@ function CartPage() {
             ) : (
                 <ListGroup variant='flush'>
                     {cartItems.map(item => (
-                        <ListGroup.Item key={item.product}> {/* we need to add a key to the ListGroup.Item because we are mapping through an array */}
+                        <ListGroup.Item className='pageCard' key={item.product}> {/* we need to add a key to the ListGroup.Item because we are mapping through an array */}
                             <Row>
                                 <Col md={2}>
                                     <Image src={item.image} alt={item.name} fluid rounded />
                                 </Col>
                                 <Col md={3}>
-                                    <Link to={`/product/${item.product}`}>{item.name}</Link>
+                                    <Link className='pageLink' to={`/product/${item.product}`}>{item.name}</Link>
                                 </Col>
                                 <Col md={2}>
                                     ${item.price}
@@ -82,13 +84,7 @@ function CartPage() {
                                     >
                                         <i className='fas fa-trash'></i>
                                     </Button>
-                                    {/* <Button 
-                                        type='button' 
-                                        variant='light' 
-                                        onClick={(e) => {e.preventDefault(); removeItemFromCart(item.product)}}
-                                    >
-                                        <i className='fas fa-trash'></i>
-                                    </Button> */}
+            
                                 </Col>
                             </Row>
                         </ListGroup.Item>
@@ -106,9 +102,11 @@ function CartPage() {
                     <ListGroup.Item>
                         <Button 
                             type='button' 
-                            className='btn-block' 
+                            className='btn-block pageButton' 
                             disabled={cartItems.length === 0}
                             onClick={itemCheckout}
+                            variant='dark'
+                            style={{marginLeft: 'unset'}}
                         >
                             Proceed To Checkout
                         </Button>

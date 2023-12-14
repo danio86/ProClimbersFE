@@ -42,7 +42,6 @@ function LoginPage() {
 
   return (
     <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
-
         <Forms >
             <h1>Sign In</h1>
             {error && <Message variant='danger'>{error}</Message>}
@@ -71,9 +70,6 @@ function LoginPage() {
                     />
                 </Form.Group>
         
-                {/* <Form.Group controlId='formBasicCheckbox'>
-                    <Form.Check type='checkbox' label='Remember Me' />
-                </Form.Group> */}
                 <Button className='pageButton' variant='dark' type='submit'>
                     Sign In
                 </Button>

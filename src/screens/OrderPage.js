@@ -9,10 +9,8 @@ import { PayPalButton } from 'react-paypal-button-v2'
 import { getOrderDetails, payOrder, deliverOrder } from '../actions/orderActions'
 import { useParams } from 'react-router-dom';
 import { ORDER_PAY_RESET, ORDER_DELIVERED_RESET } from '../constants/orderConstants'
-
-
-
-
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 
@@ -48,7 +46,6 @@ function OrderPage() {
 if (!loading && !error  && order._id !== String(orderId)) {
     order.itemsPrice = order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
 }
-// ASLk52yu1Hl3h8JRDQ72wNM0HHj5x59zTHexZP3Accp83Gq9NW6mnD9fBXCn769LjAZtUe_0LHgzh1Ae
 
 const addPayPalScript = () => {
     const script = document.createElement('script')
@@ -102,12 +99,13 @@ const handleDeliver = () => {
 
   
   (
-    <div>
-        <h1>Order {order._id}</h1>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+
+        {/* <h1>Order {order._id}</h1> */}
         <Row>
             <Col md={8}>
                 <ListGroup variant='flush'>
-                    <ListGroup.Item>
+                    <ListGroup.Item className='pageCard'>
                         <h2>Shipping</h2>
                         <p>
                             <strong>Name: </strong>
@@ -115,7 +113,7 @@ const handleDeliver = () => {
                         </p>
                         <p>
                             <strong>Email: </strong>
-                            <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                            <a className='pageLink' href={`mailto:${order.user.email}`}>{order.user.email}</a>
                         </p>
                         <p>
                             <strong>Address: </strong>
@@ -148,7 +146,7 @@ const handleDeliver = () => {
                                             </Col>
 
                                             <Col>
-                                                <Link to={`/product/${item.product}`}>
+                                                <Link className='pageLink' to={`/product/${item.product}`}>
                                                     {item.name}
                                                 </Link>
                                             </Col>

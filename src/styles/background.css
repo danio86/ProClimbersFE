@@ -22,8 +22,8 @@
 }
 
 .pageButton {
-  color: orange;
-  border-color: orange;
+  color: rgb(255, 191, 41);
+  border-color: rgb(255, 191, 41);
   margin: 0 10px;
   padding: 5px 10px;
   height: 37px;
@@ -37,4 +37,40 @@
 }
 
 
- 
+.pageCard {
+  background: rgba(255, 255, 255, 0.8); 
+}
+
+
+/* .step1Color {
+  color: rgb(139, 0, 0);
+}
+
+.step2Color {
+  color: rgb(255, 0, 0);
+}
+
+.step3Color {
+  color: rgb(255, 165, 0);
+}
+
+.step4Color {
+  color: rgb(196, 222, 2);
+} */
+
+
+.step1Color {
+  color: rgb(139, 0, 0);
+}
+
+.step2Color {
+  color: rgb(0, 0, 139);
+}
+
+.step3Color {
+  color: rgb(0, 139, 139);
+}
+
+.step4Color {
+  color: rgb(0, 139, 0);
+}

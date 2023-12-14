@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react'
-import { redirect, useLocation, useNavigate } from 'react-router-dom'
+import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector} from 'react-redux'
 import Forms from '../components/Forms'
 import { saveShippingAddress } from '../actions/cartActions'
 import Checkout from '../components/Checkout'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 
@@ -12,11 +14,7 @@ function ShippingPage() {
 
 
     const navigate = useNavigate()
-    const location = useLocation()
-    const redirect = location.search ? location.search.split('=')[1] : '/'
     const dispatch = useDispatch()
-    // const userSinup = useSelector(state => state.userRegister)
-    // const {userInfo} = userSinup
     const cart = useSelector(state => state.cart)
     const {shippingAddress} = cart
 
@@ -32,6 +30,7 @@ function ShippingPage() {
     }
 
     return (
+        <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Forms>
             <Checkout step1 step2 />
             <h1>Shipping</h1>
@@ -81,13 +80,14 @@ function ShippingPage() {
                     ></Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary'> {/* #change color here */}
+                <Button className='pageButton' style={{marginLeft: 'unset'}} type='submit' variant='dark'>
                     Continue
                 </Button>
 
 
             </Form>
         </Forms>
+        </div>
     )
   }
   

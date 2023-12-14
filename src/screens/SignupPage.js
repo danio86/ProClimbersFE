@@ -6,6 +6,8 @@ import Message from '../components/Message'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { register } from '../actions/userActions'
 import Forms from '../components/Forms'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 
@@ -51,70 +53,68 @@ function SignupPage() {
     }
 
   return (
-    <Forms>
-        <h1>Sign Up</h1>
-        {error && <Message variant='danger'>{error}</Message>}
-        {message && <Message variant='danger'>{message}</Message>}
-        {loading && <LoadingSpinner />}
-        {/* {JSON.stringify(userInfo)} */}
-        {/* {userInfo && <Message variant='success'>{userInfo}</Message>} */}
-        {/* {userInfo && <Message variant='success'>{JSON.stringify(userInfo)}</Message>} */}
-        <Form onSubmit={HandlSubmit}>
-            <Form.Group controlId='formBasicName'>
-                <Form.Label>Name</Form.Label>
-                <Form.Control 
-                    type='name' 
-                    placeholder='Enter your name' 
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <Form.Group controlId='formBasicEmail'>
-                <Form.Label>Your Email Address</Form.Label>
-                <Form.Control 
-                    type='email' 
-                    placeholder='Enter your email' 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <Form.Text className='text-muted'>
-                    We'll never share your email with anyone else.
-                </Form.Text>
-            </Form.Group>
-            <Form.Group controlId='formBasicPassword'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control 
-                    type='password' 
-                    placeholder='Enter your password' 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <Form.Group controlId='formBasicPassword2'>
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control 
-                    type='password' 
-                    placeholder='Confirm your password' 
-                    value={password2}
-                    onChange={(e) => setPassword2(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <Button variant='primary' type='submit'>
-                Sign Up
-            </Button>
-        </Form>
-        <Row className='py-3'>
-            <Col>
-                You already have an Account? <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>Login</Link>
-            </Col>
-        </Row>
-
-
-    </Forms>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <Forms>
+            <h1>Sign Up</h1>
+            {error && <Message variant='danger'>{error}</Message>}
+            {message && <Message variant='danger'>{message}</Message>}
+            {loading && <LoadingSpinner />}
+            <Form onSubmit={HandlSubmit}>
+                <Form.Group controlId='formBasicName'>
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control 
+                        type='name' 
+                        placeholder='Enter your name' 
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                </Form.Group>
+                <Form.Group controlId='formBasicEmail'>
+                    <Form.Label>Your Email Address</Form.Label>
+                    <Form.Control 
+                        type='email' 
+                        placeholder='Enter your email' 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <Form.Text className='text-muted'>
+                        We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
+                <Form.Group controlId='formBasicPassword'>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control 
+                        type='password' 
+                        placeholder='Enter your password' 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </Form.Group>
+                <Form.Group controlId='formBasicPassword2'>
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control 
+                        type='password' 
+                        placeholder='Confirm your password' 
+                        value={password2}
+                        onChange={(e) => setPassword2(e.target.value)}
+                        required
+                    />
+                </Form.Group>
+                <Button className='pageButton' variant='dark' type='submit'>
+                    Sign Up
+                </Button>
+            </Form>
+            <Row className='py-3'>
+                <Col>
+                    You already have an Account?
+                    <Link className='pageLink' to={redirect ? `/login?redirect=${redirect}` : '/login'}> Login</Link>
+                </Col>
+            </Row>
+        </Forms>
+    </div>
   )
 }
 

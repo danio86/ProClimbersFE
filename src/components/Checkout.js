@@ -1,6 +1,8 @@
 import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Nav } from 'react-bootstrap'
+import '../styles/background.css';
+
 
 function Checkout({ step1, step2, step3, step4}) {
   return (
@@ -8,7 +10,7 @@ function Checkout({ step1, step2, step3, step4}) {
         <Nav.Item>
             {step1 ? (
                 <LinkContainer to='/login/shipping'>
-                    <Nav.Link>Shipping</Nav.Link>
+                    <Nav.Link className='step1Color'>Shipping</Nav.Link>
                 </LinkContainer>
             ) : (
                 <Nav.Link disabled>Shipping</Nav.Link>
@@ -18,7 +20,7 @@ function Checkout({ step1, step2, step3, step4}) {
         <Nav.Item>
             {step2 ? (
                 <LinkContainer to='/login/payment'>
-                    <Nav.Link>Payment</Nav.Link>
+                    <Nav.Link className='step2Color'>Payment</Nav.Link>
                 </LinkContainer>
             ) : (
                 <Nav.Link disabled>Payment</Nav.Link>
@@ -28,7 +30,7 @@ function Checkout({ step1, step2, step3, step4}) {
         <Nav.Item>
             {step3 ? (
                 <LinkContainer to='/login/placeorder'>
-                    <Nav.Link>Place Order</Nav.Link>
+                    <Nav.Link className='step3Color'>Place Order</Nav.Link>
                 </LinkContainer>
             ) : (
                 <Nav.Link disabled>Place Order</Nav.Link>
@@ -38,7 +40,7 @@ function Checkout({ step1, step2, step3, step4}) {
         <Nav.Item>
             {step4 ? (
                 <LinkContainer to='/login/order'>
-                    <Nav.Link>Order</Nav.Link>
+                    <Nav.Link className='step4Color'>Order</Nav.Link>
                 </LinkContainer>
             ) : (
                 <Nav.Link disabled>Order</Nav.Link>

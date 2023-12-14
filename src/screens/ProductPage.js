@@ -7,9 +7,7 @@ import Message from '../components/Message'
 import {listProductDetails, createProductReview} from '../actions/productActions'
 import {PRODUCT_REVIEW_RESET} from '../constants/productConstants'
 import {useDispatch, useSelector} from 'react-redux'
-// import axios from 'axios'
-// import products from '../products'
-// import { useParams } from 'react-router-dom'
+import '../styles/background.css';
 
 
 function ProductPage() {
@@ -52,8 +50,7 @@ function ProductPage() {
     }, [dispatch, id, successProductReview]) //dispatch makes it run again
 
     const addToCart = () => {
-        console.log('addToCart:' + id + ' qty:' + qty + ' product:' + product)
-        // history.push(`/cart/${id}?qty=${qty}`)
+        // console.log('addToCart:' + id + ' qty:' + qty + ' product:' + product)
         navigate(`/cart/${id}?qty=${qty}`)
     }
 
@@ -88,7 +85,7 @@ function ProductPage() {
                                     <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#fcd303'} />
                                 </ListGroup.Item>
                                 <ListGroup.Item>
-                                    Price: ${product.price}
+                                    Price: {product.price}€
                                 </ListGroup.Item>
                                 <ListGroup.Item>
                                     Description: {product.description}
@@ -101,7 +98,7 @@ function ProductPage() {
                                     <ListGroup.Item>
                                         <Row>
                                             <Col>Price:</Col>
-                                            <Col><strong>${product.price}</strong></Col>
+                                            <Col><strong>{product.price}€</strong></Col>
                                         </Row>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
@@ -131,7 +128,13 @@ function ProductPage() {
                                     )}
 
                                     <ListGroup.Item>
-                                        <Button onClick={addToCart} className='btn-block' type='button' disabled={product.countInStock === 0}>
+                                        <Button 
+                                            variant='dark' 
+                                            onClick={addToCart} 
+                                            className='btn-block pageButton' 
+                                            type='button' 
+                                            style={{marginLeft: 'unset'}}
+                                            disabled={product.countInStock === 0}>
                                             Add to Cart
                                         </Button>
                                     </ListGroup.Item>
@@ -148,7 +151,7 @@ function ProductPage() {
                                 {product.reviews.map(review => (
                                     <ListGroup.Item key={review._id}>
                                         <strong>{review.name}</strong>
-                                        <Rating value={review.rating} color={'#fcd303'} />s
+                                        <Rating value={review.rating} color={'#fcd303'} />
                                         <p>{
                                             new Date(review.createdAt).toISOString().split('T')[0].split('-').reverse().join('.')
                                         }</p>
@@ -186,8 +189,11 @@ function ProductPage() {
                                                 <Form.Control as='textarea' row='3' value={comment} onChange={(e) => setComment(e.target.value)}></Form.Control>
                                             </Form.Group>
                                             <Button 
+                                                className='pageButton'
                                                 disabled={loadingProductReview}
-                                                type='submit' variant='primary'>Submit Review
+                                                style={{marginLeft: 'unset'}}
+                                                type='submit' variant='dark'>Submit Review
+                                                
                                             </Button>
                                         </Form>
                                     ) : (
