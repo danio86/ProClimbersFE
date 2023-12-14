@@ -26,7 +26,7 @@ function HomePage() {
   const keyword = params.get('keyword')
   
   
-  console.log(products, 'testttt');
+  // console.log(products, 'testttt');
 
  
 

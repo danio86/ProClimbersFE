@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import { Link, redirect, useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
 import { Form, Button, Table, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector} from 'react-redux'
 import Message from '../components/Message'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
-// import Forms from '../components/Forms'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 import { listMyOrders } from '../actions/orderActions'
 import backgroundImage from '../assets/mountain-background.png'
@@ -23,8 +22,6 @@ function ProfilePage() {
     const [message, setMessage] = useState(null)
 
     const navigate = useNavigate()
-    const location = useLocation()
-    // const redirect = location.search ? location.search.split('=')[1] : '/'
     const dispatch = useDispatch()
     const userDetails = useSelector(state => state.userDetails)
     const {error, loading, user} = userDetails

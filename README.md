@@ -10,7 +10,7 @@ ProClimbers is a shop where end users can purchase climbing shoes and, in the fu
 
 Visitors who are not logged in can browse the products in the shop, but they do not have access to CRUD functionality. Logged-in customers can place orders and pay for them in the shop, creating order objects. Shop employees, on the other hand, have full CRUD functionality at their disposal.
 
-The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
+<!-- The Project can be seen [here](https://---.herokuapp.com/) -->
 
 
 ## User Stories
@@ -215,7 +215,7 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
       - All web pages have been tested for desktop and mobil devices.
 
 - HTML Validation
-<img src="src/assets/screenshot-html-val.png" alt="HTML-Val">
+<img src="src/assets/screenshot-html-validator.png" alt="HTML-Val">
 
 - CSS Validation
 <img src="scr/assets/screenshot-css-val.png" alt="CSS Validation">
@@ -245,7 +245,7 @@ The project was deployed using Code institut's mock for Heroku
         The Heroku app was linked to the repository
         Deploy was clicked.
 
-The live link can be found [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
+<!-- The live link can be found [here](https://---.herokuapp.com/) -->
 
 
 ## Credits 

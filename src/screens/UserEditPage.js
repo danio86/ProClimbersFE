@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Link, redirect, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector} from 'react-redux'
 import Message from '../components/Message'
@@ -19,13 +19,12 @@ function UserEditPage() {
     const { id } = useParams()
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const location = useLocation()
 
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
     const [isAdmin, setIsAdmin] = useState(false)
    
-    const [message, setMessage] = useState(null)
+    // const [message, setMessage] = useState(null)
 
     const userDetails = useSelector(state => state.userDetails)
     const { loading, error, user } = userDetails
