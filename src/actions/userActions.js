@@ -81,17 +81,23 @@ export const register = (name, email, password) => async (dispatch) => {
             config
         )
 
+
         // We dispatch our success action
         dispatch({
             type: USER_REGISTER_SUCCESS,
             payload: data
         })
+        console.log('USER_REGISTER_SUCCESS action:', { type: USER_REGISTER_SUCCESS, payload: data }); // Add this line
+
 
         // We dispatch our login success action
         dispatch({
             type: USER_LOGIN_SUCCESS,
             payload: data
         })
+        console.log('USER_LOGIN_SUCCESS action:', { type: USER_LOGIN_SUCCESS, payload: data }); // Add this line
+
+
 
         // We set our user info in local storage
         localStorage.setItem('userInfo', JSON.stringify(data))

@@ -8,7 +8,8 @@ import Forms from '../components/Forms'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
 import axios from 'axios'
-
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 function ProductEdidPage() {
@@ -29,7 +30,6 @@ function ProductEdidPage() {
     const productId = id.id
 
     const productDetails = useSelector(state => state.productDetails)
-    // console.log('productDetails', productDetails)
     const { loading, error, product } = productDetails
 
     const userLogin = useSelector(state => state.userLogin)
@@ -93,7 +93,7 @@ function ProductEdidPage() {
 
 
   return (
-    <div>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Link to='/admin/productlist' className='btn btn-light my-3'>
             Go Back
         </Link>
@@ -144,8 +144,9 @@ function ProductEdidPage() {
                 <Form.Control type='text' id='description' placeholder='Enter description' value={description} onChange={(e) => setDescription(e.target.value)}></Form.Control>
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
-                Update
+            <Button className='pageButton' style={{marginLeft:'unset'}} 
+                    type='submit' variant='dark'>
+                Update/Create
             </Button>
             </Form>
             )}

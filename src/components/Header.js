@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector} from 'react-redux'
 import { logout } from '../actions/userActions'
 import SearchBar from './SearchBar'
@@ -16,6 +16,8 @@ function Header() {
   const userLogin = useSelector(state => state.userLogin)
   const {userInfo} = userLogin
 
+  useEffect(() => {
+  }, [userInfo]);
 
 const logoutHandler = () => {
   dispatch(logout())
@@ -29,7 +31,6 @@ const logoutHandler = () => {
             <Navbar.Brand>
               <img src={backgroundImage} alt="ProClimbing" style={{maxHeight: '35px', borderRadius: '50%', position: 'relative', top: '0px'}} />
             </Navbar.Brand>
-            {/* <Navbar.Brand>ProClimbing</Navbar.Brand> */}
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

@@ -13,7 +13,7 @@ import '../styles/background.css';
 
 
 
-function SignupPage() {
+function SignupPage({ onUserSignup }) {
 
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
@@ -44,12 +44,12 @@ function SignupPage() {
 
     const HandlSubmit = (e) => {
         e.preventDefault()
+        onUserSignup();
         if(password !== password2) {
             setMessage('Passwords do not match')
         } else {
             dispatch(register(name, email, password))
         }
-        dispatch(register(name, email, password))
     }
 
   return (

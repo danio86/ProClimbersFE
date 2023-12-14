@@ -8,6 +8,8 @@ import { getUserDetails } from '../actions/userActions'
 import Forms from '../components/Forms'
 import { updateUser } from '../actions/userActions'
 import { USER_UPDATE_RESET } from '../constants/userConstants'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 
@@ -62,7 +64,7 @@ function UserEditPage() {
 
 
   return (
-    <div>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Link to='/admin/userlist' className='btn btn-light my-3'>Back</Link>
 
         <Forms>
@@ -88,7 +90,7 @@ function UserEditPage() {
                         <Form.Check type='checkbox' label='Is Admin' checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)}></Form.Check>
                     </Form.Group>
 
-                    <Button type='submit' variant='primary'>Edit</Button>
+                    <Button className='pageButton' type='submit' variant='dark'>Edit</Button>
                 </Form>
             )}
 

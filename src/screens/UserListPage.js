@@ -6,6 +6,8 @@ import Message from '../components/Message'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { listUsers, deleteUser } from '../actions/userActions'
 import { useNavigate } from 'react-router-dom'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 function UserListPage() {
@@ -39,11 +41,11 @@ function UserListPage() {
 
 
   return (
-    <div>
-    <h1>UserListPage</h1>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <h1>User List</h1>
     {loading ? <LoadingSpinner /> : error ? <Message variant='danger'>{error}</Message> : (
-        <Table striped bordered hover responsive className='table-sm'>
-            <thead>
+        <Table striped bordered hover responsive className='table-sm pageCard'>
+            <thead className='pageCard'>
                 <tr>
                     <th>ID</th>
                     <th>NAME</th>
@@ -57,7 +59,7 @@ function UserListPage() {
                     <tr key={user._id}>
                         <td>{user._id}</td>
                         <td>{user.name}</td>
-                        <td><a href={`mailto:${user.email}`}>{user.email}</a></td>
+                        <td ><a className='pageLink' href={`mailto:${user.email}`}>{user.email}</a></td>
                         <td>
                             {user.isAdmin ? (
                                 <i className='fas fa-check' style={{ color: '#008000' }}></i>

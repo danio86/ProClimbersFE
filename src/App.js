@@ -19,10 +19,20 @@ import OrderListPage from './screens/OrderListPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NotFound from './components/NotFound';
 
+import React, { useState } from 'react';
+
+
 
 
 
 function App() {
+
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  const handleUserSignup = () => {
+    setRefreshKey(prevKey => prevKey + 1);
+  };
+
   return (
     <Router>
       <Header />
@@ -32,16 +42,14 @@ function App() {
             <Route path='/' element={<HomePage />}  exact />
             <Route path='/product/:id' element={<ProductPage />} />
             <Route path='/login' element={<LoginPage />} />
-            <Route path='/signup' element={<SignupPage />} />
+            <Route path='/signup' element={<SignupPage onUserSignup={handleUserSignup} />} />
             <Route path='/profile' element={<ProfilePage />} />
             <Route path='/cart/:id?' element={<CartPage />} /> {/* ? means optional */}
-            {/* <Route path='/shipping' element={<ShippingPage />} /> */}
             <Route path='/login/shipping' element={<ShippingPage />} />
             <Route path='/login/payment' element={<PaymentPage />} />
             <Route path='/login/placeorder' element={<PlaceOrderPage />} />
             <Route path='/login/order/:id' element={<OrderPage />} />
             <Route path='/admin/userlist' element={<UserListPage />} />
-            {/* <Route path='/admin/userlist/:pageNumber' element={<UserListPage />} /> */}
             <Route path='/admin/user/:id/edit' element={<UserEditPage />} />
             <Route path='/admin/productlist' element={<ProductListPage />} />
             <Route path='/admin/product/:id/edit' element={<ProductEdidPage />} />
