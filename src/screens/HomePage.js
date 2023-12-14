@@ -8,7 +8,7 @@ import Message from '../components/Message'
 import {useDispatch, useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
 import backgroundImage from '../assets/mountain-background.png'
-import '../background.css'; // adjust the path to match your file structure
+import '../styles/background.css';
 
 
 
@@ -43,8 +43,6 @@ function HomePage() {
   return (
     
     <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
-
-    {/* <div> */}
         <h1>Welcome to ProClimbing</h1>
         {
           loading ? <LoadingSpinner /> : 

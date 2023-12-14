@@ -4,7 +4,7 @@ import { logout } from '../actions/userActions'
 import SearchBar from './SearchBar'
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-import '../header.css';
+import '../styles/header.css';
 import backgroundImage from '../assets/ProclimbersLogo.png'
 
 
@@ -27,7 +27,7 @@ const logoutHandler = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src={backgroundImage} alt="ProClimbing" style={{maxHeight: '35px', borderRadius: '50%', position: 'relative', top: '-5px'}} />
+              <img src={backgroundImage} alt="ProClimbing" style={{maxHeight: '35px', borderRadius: '50%', position: 'relative', top: '0px'}} />
             </Navbar.Brand>
             {/* <Navbar.Brand>ProClimbing</Navbar.Brand> */}
           </LinkContainer>
