@@ -2,10 +2,13 @@ import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_SHIPPING_ADDRESS, CART_SAVE_
 import axios from 'axios'
 
 
+
 export const addToCart = (id, qty) => async (dispatch, getState) => {
     // getState allows us to get our entire state tree (store), which we can use to get our cartItems
     // getState returns an object, so we can destructure it to get cartItems
     const { data } = await axios.get(`/api/products/${id}`)
+
+    console.log(data.image);
 
     dispatch({ 
         type: CART_ADD_ITEM,
