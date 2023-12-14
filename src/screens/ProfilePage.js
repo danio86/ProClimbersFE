@@ -9,6 +9,8 @@ import { getUserDetails, updateUserProfile } from '../actions/userActions'
 // import Forms from '../components/Forms'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 import { listMyOrders } from '../actions/orderActions'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 
 
@@ -35,20 +37,6 @@ function ProfilePage() {
     const orderListMy = useSelector(state => state.orderListMy)
     const {loading: loadingOrders, error: errorOrders, orders} = orderListMy
 
-
-    // useEffect(() => {
-    //     if(!user || !user.name) {
-    //         navigate('/login')
-    //         // dispatch(getUserDetails('profile'))
-    //     } else {
-    //         if(!user.name || !user.name.name) {
-    //             dispatch(getUserDetails('profile'))
-    //         } else {
-    //             setName(user.name)
-    //             setEmail(user.email)
-    //         }
-    //     }
-    // }, [user, dispatch, navigate, userInfo])
 
     useEffect(() => {
         if(!userInfo) {
@@ -78,14 +66,11 @@ function ProfilePage() {
             }))
             setMessage(null)
         }
-        // dispatch(register(name, email, password))
     }
-
-    
 
 
   return (
-    <Row>
+    <Row className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Col md={3}>
             <h2>User Profile</h2>
             {message && <Message variant='danger'>{message}</Message>}
@@ -132,12 +117,12 @@ function ProfilePage() {
                     >
                     </Form.Control>
                 </Form.Group>
-                <Button type='submit' variant='primary'>
+                <Button type='submit' className='pageButton' style={{marginLeft: 'unset'}} variant='dark'>
                     Update
                 </Button>
             </Form>
         </Col>
-        <Col md={9}>
+        <Col md={9} className='pageCard'>
             <h1>My Orders</h1>
             {loadingOrders ? <LoadingSpinner /> : errorOrders ? <Message variant='danger'>{errorOrders}</Message> : (
                 <Table striped bordered hover responsive className='table-sm'>
@@ -151,7 +136,7 @@ function ProfilePage() {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='pageCard'>
                         {orders.map(order => (
                             <tr key={order._id}>
                                 <td>{order._id}</td>
@@ -172,7 +157,7 @@ function ProfilePage() {
                                 )}</td>
                                 <td>
                                     <LinkContainer to={`/login/order/${order._id}`}>
-                                        <Button className='btn-sm' variant='light'>Info</Button>
+                                        <Button className='btn-sm pageButton' style={{marginLeft:'unset'}} variant='dark'>Info</Button>
                                     </LinkContainer>
                                 </td>
                             </tr>

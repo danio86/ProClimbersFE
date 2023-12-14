@@ -88,7 +88,7 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 - On smaller screens, you will see only one column instead of three.
 
     - Landing Page
-<img src="src/assets/screenshot-landingpage.png" alt="Landing">
+<img src="src/assets/screenshot-homepage.png" alt="Homepage">
 
 
 
@@ -99,7 +99,8 @@ The Project can be seen [here](https://the-shop-fe-75bf1203be46.herokuapp.com/)
 - You can also add the product to your shopping cart here.
 
    - Product page
-   <img src="src/assets/screenshot-propertypage.png" alt="Property">
+   <img src="src/assets/screenshot-productdetail.png" alt="Property">
+   <img src="src/assets/screenshot-productdetail-lowerpart.png" alt="Property">
 
 
 

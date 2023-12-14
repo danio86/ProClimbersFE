@@ -6,6 +6,8 @@ import Message from '../components/Message'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { listOrders } from '../actions/orderActions'
 import { useNavigate } from 'react-router-dom'
+import backgroundImage from '../assets/mountain-background.png'
+import '../styles/background.css';
 
 function OrderListPage() {
 
@@ -30,7 +32,7 @@ function OrderListPage() {
 
 
   return (
-    <div>
+    <div className="backgroundImage" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <h1>Existing Orders</h1>
         {loading ? <LoadingSpinner /> : error ? <Message variant='danger'>{error}</Message> : (
             <Table striped bordered hover responsive className='table-sm'>
