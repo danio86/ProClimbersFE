@@ -25,10 +25,6 @@ function HomePage() {
   const params = new URLSearchParams(location.search)
   const keyword = params.get('keyword')
   
-  
-  // console.log(products, 'testttt');
-
- 
 
   useEffect(() => {
     if (keyword) {

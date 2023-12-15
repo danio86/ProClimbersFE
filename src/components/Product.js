@@ -8,11 +8,11 @@ import '../styles/product.css';
 function Product({product}) {
   return (
     <Card className='my-3 p-3 rounded productCard'>
-        <Link to={`/product/${product._id}`}>
-            <Card.Img src={product.image} variant='top' />
+        <Link to={`/product/${product._id}`} aria-label={`View ${product.name}`}>
+            <Card.Img src={product.image} variant='top' alt={product.name}/>
         </Link>
         <Card.Body>
-            <Link to={`/product/${product._id}`}>
+            <Link to={`/product/${product._id}`} aria-label={`View ${product.name}`}>
                 <Card.Title as='div'><strong>{product.name}</strong></Card.Title>
             </Link>
             <Card.Text as='div'>

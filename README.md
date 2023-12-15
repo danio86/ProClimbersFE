@@ -1,6 +1,6 @@
 # ProClimbers
 
-<img src="src/assets/screenshot-am-I-responsive.png" alt="Am I responsive">
+<img src="src/assets/screenshot-am-i-responsive.png" alt="Am I responsive">
 
 ProClimbers is a shop where end users can purchase climbing shoes and, in the future, other outdoor equipment. In this project, the user mainly refers to the shop owner or the admin. There are three different roles in total:
 
@@ -10,7 +10,7 @@ ProClimbers is a shop where end users can purchase climbing shoes and, in the fu
 
 Visitors who are not logged in can browse the products in the shop, but they do not have access to CRUD functionality. Logged-in customers can place orders and pay for them in the shop, creating order objects. Shop employees, on the other hand, have full CRUD functionality at their disposal.
 
-<!-- The Project can be seen [here](https://---.herokuapp.com/) -->
+The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuapp.com/)
 
 
 ## User Stories
