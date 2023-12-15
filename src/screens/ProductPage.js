@@ -50,7 +50,6 @@ function ProductPage() {
     }, [dispatch, id, successProductReview]) //dispatch makes it run again
 
     const addToCart = () => {
-        // console.log('addToCart:' + id + ' qty:' + qty + ' product:' + product)
         navigate(`/cart/${id}?qty=${qty}`)
     }
 

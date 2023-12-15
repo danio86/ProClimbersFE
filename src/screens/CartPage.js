@@ -22,7 +22,6 @@ function CartPage() {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
-    console.log(cartItems, 'cartItemsss')
 
     useEffect(() => {
         if(productId) { // if we have a product id

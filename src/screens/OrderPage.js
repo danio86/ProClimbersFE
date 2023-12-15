@@ -37,11 +37,6 @@ function OrderPage() {
 
 
 
-    console.log('URL parameters:', useParams())
-
-    // if (!loading && !error  && order._id !== Number(orderId)) {
-    //     order.itemsPrice = order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
-    // }
 
 if (!loading && !error  && order._id !== String(orderId)) {
     order.itemsPrice = order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
@@ -83,7 +78,6 @@ useEffect(() => {
 
 
 const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult)
     dispatch(payOrder(orderId, paymentResult))
 }
 

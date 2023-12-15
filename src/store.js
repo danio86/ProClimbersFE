@@ -43,8 +43,6 @@ const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(loca
 const userInfoFromStorage = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
 // if there is a user info in local storage, we parse it, otherwise we set it to null
 
-console.log('User info from storage:', userInfoFromStorage); // Add this line
-
 
 const shippingAddressFromStorage = localStorage.getItem('shippingAddress') ? JSON.parse(localStorage.getItem('shippingAddress')) : {}
 

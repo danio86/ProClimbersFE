@@ -8,7 +8,6 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
     // getState returns an object, so we can destructure it to get cartItems
     const { data } = await axios.get(`/api/products/${id}`)
 
-    console.log(data.image);
 
     dispatch({ 
         type: CART_ADD_ITEM,
