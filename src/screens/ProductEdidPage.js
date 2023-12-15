@@ -20,7 +20,8 @@ function ProductEdidPage() {
 
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)
-    const [image, setImage] = useState('')
+    // const [image, setImage] = useState('')
+    const [image, setImage] = useState('https://res.cloudinary.com/ddigiimwd/image/upload/v1/images/sample_rwcrfw');
     const [brand, setBrand] = useState('')
     const [category, setCategory] = useState('')
     const [countInStock, setCountInStock] = useState(0)
