@@ -10,17 +10,11 @@ import
 import axios from 'axios'
 
 export const listProducts = (keyword = '') => async (dispatch) => {
-// export const listProducts = (keyword = '', pageNumber = '') => async (dispatch) => {
 
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
         const { data } = await axios.get(`/api/products?keyword=${keyword}`)
-
-        // const { data } = await axios.get(`https://proclimbers-backend-d69c858b50d1.herokuapp.com/api/products?keyword=${keyword}`);
-
-
-
 
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
     
@@ -126,7 +120,6 @@ export const createProductReview = (productId, review) => async (dispatch, getSt
             Authorization: `Bearer ${userInfo.token}` } 
         }
 
-        // const { data } = await axios.post(
         const {} = await axios.post(
             `/api/products/${productId}/reviews/`, review, config)
 

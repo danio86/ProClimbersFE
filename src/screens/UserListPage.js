@@ -18,10 +18,10 @@ function UserListPage() {
     const { loading, error, users } = userList // we destructure the state
 
     const userLogin = useSelector(state => state.userLogin)
-    const { userInfo } = userLogin // we destructure the state
+    const { userInfo } = userLogin
 
     const userDelete = useSelector(state => state.userDelete)
-    const { success: successDelete } = userDelete // we destructure the state
+    const { success: successDelete } = userDelete
 
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {

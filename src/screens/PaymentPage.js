@@ -13,7 +13,6 @@ import '../styles/background.css';
 function PaymentPage() {
 
     const navigate = useNavigate()
-    // const location = useLocation()
 
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)

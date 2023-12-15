@@ -218,14 +218,15 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
 <img src="src/assets/screenshot-html-validator.png" alt="HTML-Val">
 
 - CSS Validation
-<img src="scr/assets/screenshot-css-val.png" alt="CSS Validation">
+<img src="src/assets/screenshot-css-val.png" alt="CSS-Validation">
+
 
 - JSX Validation
     - with ES-Linter
 
 
 - Lighthouse
-<img src="scr/assets/screenshot-lighthouse.png" alt="Lighthouse">
+<img src="src/assets/screenshot-lighhouse.png" alt="Lighthouse">
 
 
 

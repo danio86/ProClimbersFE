@@ -24,7 +24,6 @@ function UserEditPage() {
     const [name, setName] = useState('')
     const [isAdmin, setIsAdmin] = useState(false)
    
-    // const [message, setMessage] = useState(null)
 
     const userDetails = useSelector(state => state.userDetails)
     const { loading, error, user } = userDetails

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useParams, useNavigate } from 'react-router-dom'
-// import { Link, useParams, useLocation, useHistory } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
@@ -13,7 +12,6 @@ import '../styles/background.css';
 
 
 
-// function CartPage( { match, history } ) {
 function CartPage() {
     const location = useLocation()
     const qty = location.search ? Number(location.search.split('=')[1]) : 1

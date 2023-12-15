@@ -13,11 +13,8 @@ function SearchBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // if (keyword.trim()) {
     if (keyword) {
-        // navigate(`/search/${keyword}`)
         navigate(`/?keyword=${keyword}&page=1`)
-        // navigate(`/?keyword=${keyword}`)
     } else {
         // keep the user on the same page
         navigate(location.pathname)

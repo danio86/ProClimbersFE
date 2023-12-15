@@ -16,7 +16,6 @@ function LoginPage() {
     const [password, setPassword] = useState('')
 
     const navigate = useNavigate()
-    // const history = useHistory()
     const location = useLocation()
     const redirect = location.search ? location.search.split('=')[1] : '/'
 
