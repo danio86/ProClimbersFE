@@ -59,6 +59,7 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - As a logged-in user, I can view my user information, so that I can change them.
     - As a logged-in user, I can view my orders, so that I can get status information.
 
+<img src="src/assets/screenshot-user-story-project.png" alt="User story Project">
 
 
 
