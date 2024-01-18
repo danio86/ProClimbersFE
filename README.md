@@ -83,16 +83,6 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
       
 
 
-### The Homepage
-
-- The homepage is the starting page where you can see all products in three columns. You can scroll down here and click on individual products to get detailed information. Additionally, you can also view filtered search results here.
-- On smaller screens, you will see only one column instead of three.
-
-    - Landing Page
-<img src="src/assets/screenshot-homepage.png" alt="Homepage">
-
-
-
 ### The Product Detail Page
 
 - On the product detail page, you can access additional information about the product.
@@ -122,7 +112,7 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
 
 - If the User has admin status, she or he can create or upate, which is technically the same, a product here.
 - All filds ore optional or have default values.
-    - 404 page
+    - Edit product page
     <img src="src/assets/screenshot-edit-product.png" alt="product update">
 
 ### Update User and Order Pages
@@ -183,6 +173,63 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - In the future, an admin will be able to add additional images to their products.
     - Users can add a profile image
     - The page gets a logo
+
+
+## Components
+
+### The Homepage
+
+- The homepage is the starting page where you can see all products in three columns. You can scroll down here and click on individual products to get detailed information. Additionally, you can also view filtered search results here.
+- On smaller screens, you will see only one column instead of three.
+
+    - Landing Page
+<img src="src/assets/screenshot-homepage.png" alt="Homepage">
+
+
+### Checkout
+
+- The Checkout Component is used in the payment process. It is a bar which is displayed on top of the Shipping page, on the payment page and on the place order page. It shows the progress in the ordering process and changes the color on each single step.
+    - Checkout
+    <img src="src/assets/screenshot-checkout.png" alt="Checkout">
+
+### Footer
+
+- The Footer component is used on every page and shows the copyright and the compenys name.
+    - Footer
+    <img src="src/assets/screenshot-footer.png" alt="Footer">
+
+### Forms
+
+- The Forms component is used on every page where a form is displayed like on the loin page or on the paymentpage and all the other form pages. It is styled with react bootstrap and centers all forms, so that all forms look consistently similar.
+
+### Loading Spinner
+
+- The Loading spinner component is a loading wheel from react bootstrap which is turning as long something loads. It is styled with react bootstrap and displayd on basically every page where contend needs to be loaded like on the homepage, the Order page, ... .
+
+### Message
+- The Message component is a react bootstrap alert method. It shows different types of messages like error messages or success messages. The messages can have a default text or a customized text and the messages can be colored with react bootstrap. This component is used where the user has to fillout a form, like on the signUp page.
+
+### Not Found
+- If the user clicks on a link that goes nowhere, they will be directed here. This component is placed in Apps.js and used as a page. 
+     - 404 page
+    <img src="src/assets/screenshot-404.png" alt="404">
+
+
+### Products
+
+- The Products component is react bootstrap Cartcomponent which shows all the products with information like price, name, ... It is is used only on the homepage and styled with bootstrap.
+
+
+### Rating
+- The Rating component is used to rate the products. The user can comment the products and rate the products with font-awesome stars. The stars are filled yellow. The amount of color which fills the stars is calculated with user values sended to the component. The stars can be empty half full or completey full. The component is used on the product page and in the product component.
+
+
+### Seachbar
+- The seachbar component is placed in the headr component and filters the products by name or parts of the name.
+    - Searchbar
+    <img src="src/assets/screenshot-searchbar-result.png" alt="Seachbar">
+
+
 
 
 
