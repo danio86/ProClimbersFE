@@ -33,9 +33,9 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - As any kind of user, I can click on a product, so that I can get more information about it. 
 
 - **The Product Detail Page**
-    - As a logged-in customer, I can view the properties page so that I can read the information about the property.
+    - As a logged-in customer, I can view the product page so that I can read the information about the product.
     - As a logged-in customer, I can write comments and rate the product so that other customers can get motivated to buy the product too.
-    - As a logged-in customer, I can add the product to my cart here, so that I can view my order there.
+    - As a logged-in customer, I can add the product to my cart, so that I can view my order there.
 
 - **The Cart Page**
     - As a logged-in customer, I can view my order, so that I can get all information about the quantity and the price of my order.
@@ -43,10 +43,19 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - As a logged-in customer, I can edit the amount of the product, so that I can choose to buy more or less of the product.
     - As a logged-in customer, I can navigate to the payment process, so that I can buy the product.
 
+- **The Payment Process Pages**
+    - As a logged-in customer, I can type in my address, so that the order can be shipped to my place.
+    - As a logged-in customer, I can choose a payment method, so that I can pay for the order.
+    - As a logged-in customer, I can place the order, so that I can actually order the product.
+    - As a logged-in customer, I can view my order, so that I can check if everything is correct.
+    - As a logged-in customer, I can click on the pay button, so that I can actually pay for the order.
+    - As a logged-in customer, I can view my order, so that I can check if the order is paid or already delivered.
+
 - **The Admin Dashboards**
     - As a shop owner, I can navigate to the admin dashboards for users, orders, and products, so that I can navigate from here to the edit/update pages.
     - As a shop owner, I can click the delete button, so that I can delete products, orders, and users.
     - As a shop owner, I can view all users, products, and orders, so that I can get all the information I need.
+    - As a shop owner, I can click the info button on the order dashboard, so that I can check the staus of the oder.
 
 - **The Edit Pages**
     - As a shop owner, I can change attributes of products, so that visitors see other prices, images, etc.
@@ -56,7 +65,7 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - As a shop owner, I can change the order status, so that the order shows up as delivered.
 
 - **The User Pages**
-    - As a logged-in user, I can view my user information, so that I can change them.
+    - As a logged-in user, I can view my user information (Name, email, ...), so that I can change them.
     - As a logged-in user, I can view my orders, so that I can get status information.
 
 <img src="src/assets/screenshot-user-story-project.png" alt="User story Project">
@@ -185,7 +194,6 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - Landing Page
 <img src="src/assets/screenshot-homepage.png" alt="Homepage">
 
-
 ### Checkout
 
 - The Checkout Component is used in the payment process. It is a bar which is displayed on top of the Shipping page, on the payment page and on the place order page. It shows the progress in the ordering process and changes the color on each single step.
@@ -194,40 +202,40 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
 
 ### Footer
 
-- The Footer component is used on every page and shows the copyright and the compenys name.
+- The Footer component is used on every page and shows the copyright and the company's name.
     - Footer
     <img src="src/assets/screenshot-footer.png" alt="Footer">
 
 ### Forms
 
-- The Forms component is used on every page where a form is displayed like on the loin page or on the paymentpage and all the other form pages. It is styled with react bootstrap and centers all forms, so that all forms look consistently similar.
+- The Forms component is used on every page where a form is displayed like on the login page or on the payment page and all the other form pages. It is styled with React Bootstrap and centers all forms, so that all forms look consistently similar.
 
 ### Loading Spinner
 
-- The Loading spinner component is a loading wheel from react bootstrap which is turning as long something loads. It is styled with react bootstrap and displayd on basically every page where contend needs to be loaded like on the homepage, the Order page, ... .
+- The Loading Spinner component is a loading wheel from React Bootstrap which is turning as long as something loads. It is styled with React Bootstrap and displayed on basically every page where content needs to be loaded like on the homepage, the Order page, etc.
 
 ### Message
-- The Message component is a react bootstrap alert method. It shows different types of messages like error messages or success messages. The messages can have a default text or a customized text and the messages can be colored with react bootstrap. This component is used where the user has to fillout a form, like on the signUp page.
+- The Message component is a React Bootstrap alert method. It shows different types of messages like error messages or success messages. The messages can have a default text or a customized text and the messages can be colored with React Bootstrap. This component is used where the user has to fill out a form, like on the sign-up page.
+    - Message
+    <img src="src/assets/screenshot-message.png" alt="Message">
 
 ### Not Found
 - If the user clicks on a link that goes nowhere, they will be directed here. This component is placed in Apps.js and used as a page. 
      - 404 page
     <img src="src/assets/screenshot-404.png" alt="404">
 
-
 ### Products
-
-- The Products component is react bootstrap Cartcomponent which shows all the products with information like price, name, ... It is is used only on the homepage and styled with bootstrap.
-
+- The Products component is a React Bootstrap Cart component which shows all the products with information like price, name, etc. It is used only on the homepage and styled with Bootstrap.
 
 ### Rating
-- The Rating component is used to rate the products. The user can comment the products and rate the products with font-awesome stars. The stars are filled yellow. The amount of color which fills the stars is calculated with user values sended to the component. The stars can be empty half full or completey full. The component is used on the product page and in the product component.
+- The Rating component is used to rate the products. The user can comment on the products and rate the products with Font Awesome stars. The stars are filled yellow. The amount of color which fills the stars is calculated with user values sent to the component. The stars can be empty, half full or completely full. The component is used on the product page and in the product component.
+    - Rating
+    <img src="src/assets/screenshot-searchbar-rating.png" alt="Rating">
 
-
-### Seachbar
-- The seachbar component is placed in the headr component and filters the products by name or parts of the name.
+### Searchbar
+- The Searchbar component is placed in the header component and filters the products by name or parts of the name.
     - Searchbar
-    <img src="src/assets/screenshot-searchbar-result.png" alt="Seachbar">
+    <img src="src/assets/screenshot-searchbar-result.png" alt="Searchbar">
 
 
 
