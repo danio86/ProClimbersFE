@@ -213,6 +213,8 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
 ### Loading Spinner
 
 - The Loading Spinner component is a loading wheel from React Bootstrap which is turning as long as something loads. It is styled with React Bootstrap and displayed on basically every page where content needs to be loaded like on the homepage, the Order page, etc.
+    - Loading Spinner
+    <img src="src/assets/screenshot-loadingSpinner.png" alt="Loading Spinner">
 
 ### Message
 - The Message component is a React Bootstrap alert method. It shows different types of messages like error messages or success messages. The messages can have a default text or a customized text and the messages can be colored with React Bootstrap. This component is used where the user has to fill out a form, like on the sign-up page.
