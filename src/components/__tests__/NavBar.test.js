@@ -24,8 +24,8 @@ test('renders header', () => {
     );
 
     // screen.debug();
-    const linkElement = screen.getByText(/ProClimbing/i);
-    expect(linkElement).toBeInTheDocument();
+    const imageElement = screen.getByAltText(/ProClimbing/i);
+    expect(imageElement).toBeInTheDocument();
 });
 
 

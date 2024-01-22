@@ -39,6 +39,9 @@ function ProductEdidPage() {
     const { loading: loadingUpdate, error: errorUpdate, success: successUpdate } = productUpdate
 
     useEffect(() => {
+        if (!userInfo || !userInfo.isAdmin) {
+            navigate('/login')
+        }
         if (successUpdate) {
             dispatch({ type: PRODUCT_UPDATE_RESET })
             navigate('/admin/productlist')

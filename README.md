@@ -8,7 +8,7 @@ ProClimbers is a shop where end users can purchase climbing shoes and, in the fu
     Logged-in customers with an account, and
     Visitors who are not logged in.
 
-Visitors who are not logged in can browse the products in the shop, but they do not have access to CRUD functionality. Logged-in customers can place orders and pay for them in the shop, creating order objects. Shop employees, on the other hand, have full CRUD functionality at their disposal.
+Visitors who are not logged in can browse the products in the shop, but they do not have access to CRUD (Create, Read, Update, Delete) functionality. Logged-in customers can place orders and pay for them in the shop, thus creating order objects. Shop employees, on the other hand, have full CRUD functionality at their disposal. Only the shop owner (a user with admin status) can create and edit products. The owner can also grant admin status to other signed-up users, enabling them to create and update products as well.
 
 The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuapp.com/)
 
@@ -250,9 +250,16 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - I confirm that the website works and looks good on all standard screen sizes. This was tested with the devtools divice toolbar.
     - I confirm that the all forms are working.
     - I confirm that the the user can create, edit and delete products and orders.
-
-
-    
+    - Components are tested with `test.js` files, such as `NavBar.test.js`.
+    - This test imports modules like `@testing-library/react`, `react-router-dom`, `react-redux`, and `redux` to render and test the `Header` component.
+    - A mock reducer simulates a logged-in user state, used to create a mock Redux store.
+    - Three tests are performed:
+    - 'renders header' checks for an image with alt text 'ProClimbing'.
+    - 'renders userdropdown if the user is logged in' checks for the text 'Username'.
+    - 'renders login link if the user is not logged in' checks for the text 'LogIn'.
+    - The `Header` component is rendered within a `Provider` and `BrowserRouter` for each test, using `@testing-library/react` for rendering, querying, and assertions.
+    - Manual Test
+    <img src="src/assets/screenshot-test.js.png" alt="test.js">
 
 ### Validator Testing
 
