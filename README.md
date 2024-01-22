@@ -340,6 +340,23 @@ The live link can be found [here](https://proclibers-frontend-5a09a51b15d8.herok
 - Color-Scheme
   <img src="src/assets/color-scheme.png" alt="Color Scheme">
 
+
+### Libraries
+
+ - React: Core library for building user interfaces.
+ - React-DOM: Handles rendering of React components in the DOM.
+ - React-Scripts: Set of scripts from create-react-app for starting, building, and testing a React app.
+ - React-Router-Dom: Routing library for React, allows creation of multiple routes.
+ - React-Bootstrap and Bootstrap: Used for styling React components.
+ - React-Redux: State management library for React apps, used for storing and managing global state.
+ - Axios: Used for making HTTP requests from the browser to the server.
+ - Jwt-decode: Used for decoding JSON Web Tokens (JWTs), commonly used for authentication.
+ - React-PayPal-Button-V2: Provides a PayPal button component for React.
+ - @Testing-Library/React, @Testing-Library/Jest-Dom, @Testing-Library/User-Event: Used for testing React components.
+ - Redux-Thunk: Middleware for Redux, allows action creators to return a function instead of an action.
+ - Redux-Devtools-Extension: Allows use of Redux DevTools for debugging Redux state.
+
+
 ### Media
 
 - The product images are from this open Source site [berg-freunde](https://www.berg-freunde.at/kletterschuhe/)
