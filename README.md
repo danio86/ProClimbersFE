@@ -305,13 +305,14 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
 The project was deployed using Code institut's mock for Heroku
 
     Steps for deployment:
-        This repository was cloned.
-        A Herroku app was created.
-        Added config vars for the secret key and for the posgresql database.
-        The Heroku app was linked to the repository
-        Deploy was clicked.
+    - This repository was cloned.
+    - A Herroku app was created on [Heroku](https://dashboard.heroku.com/apps)
+    - The Heroku app was linked to the repository
+    - The App was connected to the [proClimbers backend project](https://proclimbers-backend-d69c858b50d1.herokuapp.com/)
+        - For this, settings had to be made in package.json (proxy) and in axiosDefaults.js
+    - Deploy was clicked.
 
-<!-- The live link can be found [here](https://---.herokuapp.com/) -->
+The live link can be found [here](https://proclibers-frontend-5a09a51b15d8.herokuapp.com/)
 
 
 ## Credits 
