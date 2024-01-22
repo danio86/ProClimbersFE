@@ -99,7 +99,7 @@ function ProductEdidPage() {
         </Link>
 
         <Forms>
-            <h1>Edit Product</h1>
+            <h1>Edit/Create Product</h1>
 
             {loadingUpdate && <LoadingSpinner />}
             {errorUpdate && <Message variant='warnung'>{errorUpdate}</Message>}
@@ -109,34 +109,34 @@ function ProductEdidPage() {
             <Form onSubmit={handleSubmit}>
             <Form.Group>
                 <Form.Label htmlFor='name'>Name</Form.Label>
-                <Form.Control type='name' id='name' placeholder='Enter a name' value={name} onChange={(e) => setName(e.target.value)}></Form.Control>
+                <Form.Control required type='name' id='name' placeholder='Enter a name' value={name} onChange={(e) => setName(e.target.value) }></Form.Control>
             </Form.Group>
 
             <Form.Group>
                 <Form.Label htmlFor='price'>Price</Form.Label>
-                <Form.Control type='number' id='price' placeholder='Enter a price' value={price} onChange={(e) => setPrice(e.target.value)}></Form.Control>
+                <Form.Control required type='number' id='price' placeholder='Enter a price' value={price} onChange={(e) => setPrice(e.target.value)}></Form.Control>
             </Form.Group>
 
             <Form.Group>
                 <Form.Label htmlFor='image'>Image</Form.Label>
-                <Form.Control type='text' id='image' placeholder='Enter an image' value={image} onChange={(e) => setImage(e.target.value)}></Form.Control>
+                <Form.Control required type='text' id='image' placeholder='Enter an image' value={image} onChange={(e) => setImage(e.target.value)}></Form.Control>
                 <Form.Control type='file' id='image-file' label='Choose Image' custom onChange={handleUpload}></Form.Control>
                 {uploading && <LoadingSpinner />}
             </Form.Group>
 
             <Form.Group>
                 <Form.Label htmlFor='brand'>Brand</Form.Label>
-                <Form.Control type='text' id='brand' placeholder='Enter a brand' value={brand} onChange={(e) => setBrand(e.target.value)}></Form.Control>
+                <Form.Control required type='text' id='brand' placeholder='Enter a brand' value={brand} onChange={(e) => setBrand(e.target.value)}></Form.Control>
             </Form.Group>
 
             <Form.Group>
                 <Form.Label htmlFor='countInStock'>Count In Stock</Form.Label>
-                <Form.Control type='number' id='countInStock' placeholder='Enter countInStock' value={countInStock} onChange={(e) => setCountInStock(e.target.value)}></Form.Control>
+                <Form.Control required type='number' id='countInStock' placeholder='Enter countInStock' value={countInStock} onChange={(e) => setCountInStock(e.target.value)}></Form.Control>
             </Form.Group>
 
             <Form.Group>
                 <Form.Label htmlFor='category'>Category</Form.Label>
-                <Form.Control type='text' id='category' placeholder='Enter category' value={category} onChange={(e) => setCategory(e.target.value)}></Form.Control>
+                <Form.Control required type='text' id='category' placeholder='Enter category' value={category} onChange={(e) => setCategory(e.target.value)}></Form.Control>
             </Form.Group>
 
             <Form.Group>

@@ -49,6 +49,13 @@ function ProductListPage() {
     }, [dispatch, navigate, userInfo, id, successDelete, successCreate, createdProduct])
         
 
+    useEffect(() => {
+        products.forEach(product => {
+            if (!product.name || !product.price || !product.category || !product.brand) {
+                dispatch(deleteProduct(product._id));
+            }
+        });
+    }, [dispatch, products]);
 
     
 
