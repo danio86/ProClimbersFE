@@ -336,11 +336,6 @@ The live link can be found [here](https://proclibers-frontend-5a09a51b15d8.herok
 
 
 
-
-- Color-Scheme
-  <img src="src/assets/color-scheme.png" alt="Color Scheme">
-
-
 ### Libraries
 
  - React: Core library for building user interfaces.
@@ -356,6 +351,11 @@ The live link can be found [here](https://proclibers-frontend-5a09a51b15d8.herok
  - Redux-Thunk: Middleware for Redux, allows action creators to return a function instead of an action.
  - Redux-Devtools-Extension: Allows use of Redux DevTools for debugging Redux state.
 
+
+## Design
+
+- Color-Scheme
+  <img src="src/assets/color-scheme.png" alt="Color Scheme">
 
 ### Media
 
