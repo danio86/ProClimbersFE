@@ -46,7 +46,7 @@ function ProductEdidPage() {
             dispatch({ type: PRODUCT_UPDATE_RESET })
             navigate('/admin/productlist')
         } else {
-            if (!product.name || product._id !== Number(productId)) {
+            if (!product || !product.name || product._id !== Number(productId)) {
                 dispatch(listProductDetails(productId))
             } else {
                 setName(product.name)
@@ -58,7 +58,7 @@ function ProductEdidPage() {
                 setDescription(product.description)
             }
         }
-    }, [dispatch, navigate, productId, product, successUpdate])
+    }, [dispatch, navigate, productId, product, successUpdate, userInfo])
 
 
     const handleSubmit = (e) => {
