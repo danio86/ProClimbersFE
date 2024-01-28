@@ -51,7 +51,13 @@ function ProductListPage() {
 
     useEffect(() => {
         products.forEach(product => {
-            if (!product.name || !product.price || !product.category || !product.brand) {
+            console.log(product.name, product.price, product.category, product.brand)
+            if (!product.name || !product.price || !product.category || !product.brand ||
+                product.name === 'please select' || product.price === 'please select' ||
+                product.category === 'please select' || product.brand === 'please select') {
+                // alert ('Please fill in all fields to create a new product')
+                window.alert('Please fill in all fields to create a new product');
+
                 dispatch(deleteProduct(product._id));
             }
         });
