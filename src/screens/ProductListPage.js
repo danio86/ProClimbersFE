@@ -55,10 +55,8 @@ function ProductListPage() {
             if (!product.name || !product.price || !product.category || !product.brand ||
                 product.name === 'please select' || product.price === 'please select' ||
                 product.category === 'please select' || product.brand === 'please select') {
-                // alert ('Please fill in all fields to create a new product')
-                window.alert('Please fill in all fields to create a new product');
-
                 dispatch(deleteProduct(product._id));
+                window.alert('Please fill in all fields to create a new product');
             }
         });
     }, [dispatch, products]);
