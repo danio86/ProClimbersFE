@@ -53,8 +53,8 @@ function ProductListPage() {
         products.forEach(product => {
             console.log(product.name, product.price, product.category, product.brand)
             if (!product.name || !product.price || !product.category || !product.brand ||
-                product.name === 'please select' || product.price === 'please select' ||
-                product.category === 'please select' || product.brand === 'please select') {
+                product.name === 'select name' || product.price === 'please select' ||
+                product.category === 'select category' || product.brand === 'select brand') {
                 dispatch(deleteProduct(product._id));
                 window.alert('Please fill in all fields to create a new product');
             }
