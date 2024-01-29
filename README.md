@@ -135,7 +135,7 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     <img src="src/assets/screenshot-edit-order.png" alt="order update">
 
 
-### order and pay process Pages
+### Order and Pay process Pages
 
 - This process contains severral pages
   - The user can change the amount of products her and gets an overview about all pices
@@ -250,6 +250,7 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
     - I confirm that the website works and looks good on all standard screen sizes. This was tested with the devtools divice toolbar.
     - I confirm that the all forms are working.
     - I confirm that the the user can create, edit and delete products and orders.
+    - I have manually tested every link and function in the project.
     - Components are tested with `test.js` files, such as `NavBar.test.js`.
     - This test imports modules like `@testing-library/react`, `react-router-dom`, `react-redux`, and `redux` to render and test the `Header` component.
     - A mock reducer simulates a logged-in user state, used to create a mock Redux store.
@@ -305,7 +306,7 @@ The Project can be seen [here](https://proclibers-frontend-5a09a51b15d8.herokuap
 The project was deployed using Code institut's mock for Heroku
 
     Steps for deployment:
-    - This repository was cloned.
+    - This repository was cloned from a local VS-Code folder.
     - A Herroku app was created on [Heroku](https://dashboard.heroku.com/apps)
     - The Heroku app was linked to the repository
     - The App was connected to the [proClimbers backend project](https://proclimbers-backend-d69c858b50d1.herokuapp.com/)
@@ -351,11 +352,14 @@ The live link can be found [here](https://proclibers-frontend-5a09a51b15d8.herok
  - Redux-Thunk: Middleware for Redux, allows action creators to return a function instead of an action.
  - Redux-Devtools-Extension: Allows use of Redux DevTools for debugging Redux state.
 
+ - Since I do not have enough experience to compare different library options, the libraries were chosen based on the recommendations of the Code Institute staff and my internet research.
+
 
 ## Design
 
 - Color-Scheme
   <img src="src/assets/color-scheme.png" alt="Color Scheme">
+
 
 ### Media
 

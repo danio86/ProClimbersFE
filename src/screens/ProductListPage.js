@@ -109,7 +109,7 @@ function ProductListPage() {
                 <Table striped bordered hover responsive className='table-sm'>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th style={{display: 'none'}}>ID</th>
                             <th>NAME</th>
                             <th>PRICE</th>
                             <th>CATEGORY</th>
@@ -120,7 +120,7 @@ function ProductListPage() {
                     <tbody>
                         {products.map(product => (
                             <tr key={product._id}>
-                                <td>{product._id}</td>
+                                <td style={{display: 'none'}}>{product._id}</td>
                                 <td>{product.name}</td>
                                 <td>{product.price}€</td>
                                 <td>{product.category}</td>
