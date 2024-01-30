@@ -38,28 +38,6 @@ function ProductEdidPage() {
     const productUpdate = useSelector(state => state.productUpdate)
     const { loading: loadingUpdate, error: errorUpdate, success: successUpdate } = productUpdate
 
-    // useEffect(() => {
-    //     if (!userInfo || !userInfo.isAdmin) {
-    //         navigate('/login')
-    //     }
-    //     if (successUpdate) {
-    //         dispatch({ type: PRODUCT_UPDATE_RESET })
-    //         navigate('/admin/productlist')
-    //     } else {
-    //         if (!product.name || product._id !== Number(productId)) {
-    //             dispatch(listProductDetails(productId))
-    //         } else {
-    //             setName(product.name)
-    //             setPrice(product.price)
-    //             setImage(product.image)
-    //             setBrand(product.brand)
-    //             setCategory(product.category)
-    //             setCountInStock(product.countInStock)
-    //             setDescription(product.description)
-    //         }
-    //     }
-    // }, [dispatch, navigate, productId, product, successUpdate])
-
     useEffect(() => {
         if (!userInfo || !userInfo.isAdmin) {
             navigate('/login')
@@ -105,7 +83,6 @@ function ProductEdidPage() {
                 }
             }
 
-            // const { data } = await axios.post('/api/upload', formData, config)
             const { data } = await axios.post('/api/products/upload/', formData, config)
             setImage(data)
             setUploading(false)

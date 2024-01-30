@@ -352,7 +352,30 @@ The live link can be found [here](https://proclibers-frontend-5a09a51b15d8.herok
  - Redux-Thunk: Middleware for Redux, allows action creators to return a function instead of an action.
  - Redux-Devtools-Extension: Allows use of Redux DevTools for debugging Redux state.
 
- - Since I do not have enough experience to compare different library options, the libraries were chosen based on the recommendations of the Code Institute staff and my internet research.
+    - Resons why these libraries were choosen:
+        - React: Chosen for its efficiency and flexibility in building interactive user interfaces. It allows for the creation of reusable components, leading to faster development and easier maintenance.
+
+        - React-DOM: Essential for rendering React components in the DOM, making it a necessary part of any React application.
+
+        - React-Scripts: Simplifies the setup and operation of the development environment, eliminating the need for complex configuration.
+
+        - React-Router-Dom: Enables the creation of multiple routes and navigation in the application, providing a seamless user experience.
+
+        - React-Bootstrap and Bootstrap: Provides pre-built styling components, reducing the time spent on CSS and improving consistency across the application.
+
+        - React-Redux: Facilitates state management in the application, making it easier to manage and track changes to the application's state.
+
+        - Axios: Simplifies making HTTP requests, supports promises, and allows for easy handling of requests and responses.
+
+        - Jwt-decode: Essential for handling JSON Web Tokens, which are commonly used for user authentication and secure transmission of information.
+
+        - React-PayPal-Button-V2: Provides a ready-to-use PayPal button component, simplifying the integration of PayPal payments in the application.
+
+        - @Testing-Library/React, @Testing-Library/Jest-Dom, @Testing-Library/User-Event: Provides a robust set of testing utilities, making it easier to write tests for React components and ensuring the application works as expected.
+
+        - Redux-Thunk: Enables asynchronous actions in Redux, allowing for more complex workflows and better handling of side effects.
+
+        - Redux-Devtools-Extension: Facilitates debugging of Redux state, making it easier to track changes and understand the state flow in the application.
 
 
 ## Design

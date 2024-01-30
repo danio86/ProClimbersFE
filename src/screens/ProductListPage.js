@@ -72,8 +72,6 @@ function ProductListPage() {
 
     const handlCreatPoduct = () => {
         dispatch(createProduct())
-        // navigate('/admin/product/new')
-        // navigate('/admin/product/new/edit')
     }
 
 
